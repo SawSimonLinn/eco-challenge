@@ -9,52 +9,70 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Dark mode for body */
-.body--dark {
-  background-image: url("../images/pagebg.svg");
+.body {
+  background-image: url("../images/bgimage.png");
   background-size: cover;
   background-position: center;
 }
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Spreads logo & links */
-  align-items: center; /* Centers everything vertically */
-  padding: 20px;
+*/ .navbar__title {
+  left: 158px;
 }
-
-/* Dark mode modifier for navbar */
-.navbar--dark {
-  background: rgba(0, 0, 0, 0.6);
-}
-
 .navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 18px;
   font-weight: bold;
   color: white;
 }
 
+.navbar__logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar__banner {
+  background-color: #030303;
+  opacity: 0.5;
+}
+/* Dark mode modifier for navbar 
+.navbar--dark {
+  background: rgba(0, 0, 0, 0.6);
+}
+*/
 /* Wrapper for links */
 .navbar__links {
   display: flex;
   gap: 20px; /* Space between links */
   align-items: center;
+  color: #ffffff;
+  opacity: 1;
 }
 
 .navbar__link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+  opacity: 1;
 }
 
-/* Ensures the button matches alignment */
+/* Ensures the button alignment */
 .navbar__btn {
   padding: 12px 24px;
-  background: #1e3a8a;
-  color: white;
+  background-color: transparent;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
+  border: #ffffff;
   border-radius: 5px;
+  border-color: #ffffff;
 }
 
 /* Section */
@@ -62,17 +80,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+
+  text-align: left;
   height: 80vh;
   padding: 20px;
 }
 
-/* Dark mode modifier for section */
+/* Dark mode modifier for section 
 .section--dark {
   background: rgba(0, 0, 0, 0.5);
-}
-
+}*/
 .section__title {
   font-size: 36px;
   font-weight: bold;
@@ -84,15 +101,19 @@ body {
 }
 
 /* Button */
-.btn {
+.section__btn {
   display: inline-block;
+  background-color: #030303;
   margin-top: 20px;
+  text-align: left;
   padding: 12px 24px;
-  background: #1e3a8a;
+
   color: white;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 15px;
+  width: 328px;
+  height: 68px;
 }
 
 /* Footer */
@@ -101,7 +122,8 @@ body {
   padding: 20px;
 }
 
-/* Dark mode modifier for footer */
+/* Dark mode modifier for footer 
 .footer--dark {
   background: rgba(0, 0, 0, 0.6);
 }
+*/

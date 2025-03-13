@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eco Challenge</title>
+
+    <title class="navbar__title">Eco Challenge</title>
     <link rel="stylesheet" href="pages/index.css" />
   </head>
   <body class="body body--dark">
     <header class="header">
-      <div class="navbar navbar--dark">
-        <div class="navbar__logo">Eco Challenge</div>
+      <div class="navbar navbar--dark navbar__banner">
+        <div class="navbar__logo">
+          <img
+            src="images/eco-challenge-logo.svg"
+            alt="Eco Challenge Logo"
+            class="navbar__logo-img"
+          />Eco Challenge
+        </div>
         <div class="navbar__links">
-          <a href="#" class="navbar__link">Challenges</a>
-          <a href="#" class="navbar__link">Progress</a>
-          <a href="#" class="navbar__link">Learn More</a>
-          <a href="#" class="navbar__btn">Start Challenge</a>
+          <a class="navbar__link">Challenges</a>
+          <a class="navbar__link">Progress</a>
+          <a class="navbar__link">Learn More</a>
+          <button type="button" class="navbar__btn navbar__btn-dark">
+            Start Challenge
+          </button>
         </div>
       </div>
     </header>
@@ -27,7 +36,9 @@
         Complete simple daily challenges to reduce your environmental impact and
         build sustainable habits.<br />Small actions, big change!
       </p>
-      <a href="#" class="btn">Start Your Challenge</a>
+      <button type="button" class="section__btn section__btn-dark">
+        Start Your Challenge
+      </button>
     </section>
 
     <footer class="footer footer--dark">
