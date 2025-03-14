@@ -1,0 +1,129 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.body {
+  background-image: url("../images/bgimage.png");
+  background-size: cover;
+  background-position: center;
+}
+*/ .navbar__title {
+  left: 158px;
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar__logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar__banner {
+  background-color: #030303;
+  opacity: 0.5;
+}
+/* Dark mode modifier for navbar 
+.navbar--dark {
+  background: rgba(0, 0, 0, 0.6);
+}
+*/
+/* Wrapper for links */
+.navbar__links {
+  display: flex;
+  gap: 20px; /* Space between links */
+  align-items: center;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.navbar__link {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Ensures the button alignment */
+.navbar__btn {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border: #ffffff;
+  border-radius: 5px;
+  border-color: #ffffff;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+  height: 80vh;
+  padding: 20px;
+}
+
+/* Dark mode modifier for section 
+.section--dark {
+  background: rgba(0, 0, 0, 0.5);
+}*/
+.section__title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.section__text {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Button */
+.section__btn {
+  display: inline-block;
+  background-color: #030303;
+  margin-top: 20px;
+  text-align: left;
+  padding: 12px 24px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 15px;
+  width: 328px;
+  height: 68px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark mode modifier for footer 
+.footer--dark {
+  background: rgba(0, 0, 0, 0.6);
+}
+*/
