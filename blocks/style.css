@@ -7,12 +7,14 @@
 
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  max-width: 100%;
 }
 
 .body {
   background-image: url(../images/bgimage.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Navbar */
