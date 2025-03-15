@@ -40,6 +40,7 @@ margin-bottom: 148px;
 
 .card__small {
   font-size: 24px;
+  color: #fff;
   padding-bottom: 90px;
   padding-left: 30px;
   padding-top: 150px;
@@ -47,4 +48,9 @@ margin-bottom: 148px;
   max-width: 258px;
   border-radius: 25px;
   max-height: 303px;
+}
+
+.card__small-link{
+  font-size: 16px;
+  color: #fff;
 }
