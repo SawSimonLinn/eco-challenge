@@ -1,0 +1,44 @@
+.header {
+  background-image: url(../images/garden-hands.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__title {
+  color: white;
+  font-size: 64px;
+  font-family: "Montserrat-Bold";
+  margin: 0 auto;
+  text-align: center;
+  padding: 291px 201px 26px;
+  max-width: 1400px;
+}
+
+.header__description {
+  color: white;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.header__challenge-btn {
+  display: block;
+  padding: 22px 95px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  margin: 0 auto;
+  margin-top: 76px;
+}
+
+.header__footer {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 138px;
+  padding-bottom: 29px;
+  font-size: 16px;
+}

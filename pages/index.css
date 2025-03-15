@@ -1,2 +1,15 @@
-@import url("../blocks/style.css");
+@import url("../vendor/normalize.css");
 @import url("../vendor/fonts.css");
+@import url("../blocks/style.css");
+@import url("../blocks/page.css");
+@import url("../blocks/nav.css");
+@import url("../blocks/header.css");
+@import url("../blocks/challenges.css");
+@import url("../blocks/tips.css");
+@import url("../blocks/resources.css");
+@import url("../blocks/cards.css");
+
+
+
+
+

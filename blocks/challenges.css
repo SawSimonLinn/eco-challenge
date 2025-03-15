@@ -1,0 +1,41 @@
+.challenges {
+}
+
+.challenges__description {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 24px;
+  max-width: 700px;
+  padding-top: 83px;
+}
+
+.challenges__title {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.challenge__list {
+  display: block;
+  margin-top: 68px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  gap: 14px;
+  padding-bottom: 148px;
+}
+
+.challenge__checkbox {
+  border: 1px solid black;
+  width: 880px;
+  border-radius: 15px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 38px;
+  background-color: white;
+}
