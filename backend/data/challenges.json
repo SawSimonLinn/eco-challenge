@@ -1,0 +1,134 @@
+[
+  {
+    "goal": "reduce-plastic",
+    "level": "beginner",
+    "task": [
+      "Bring a reusable water bottle instead of buying plastic bottles.",
+      "Use a reusable tote bag instead of plastic bags.",
+      "Say no to plastic straws when eating out.",
+      "Use a reusable lunchbox instead of plastic wrap or bags.",
+      "Buy loose fruits and vegetables instead of packaged ones."
+    ]
+  },
+  {
+    "goal": "reduce-plastic",
+    "level": "intermediate",
+    "task": [
+      "Carry a set of reusable cutlery when eating out.",
+      "Store food in glass or stainless steel containers instead of plastic.",
+      "Avoid buying bottled beverages—bring your own cup.",
+      "Choose products with minimal or compostable packaging.",
+      "Wash & reuse plastic food containers instead of discarding them."
+    ]
+  },
+  {
+    "goal": "reduce-plastic",
+    "level": "advanced",
+    "task": [
+      "Switch to plastic-free personal care products (e.g., shampoo bars).",
+      "Find a local refill station for bulk food or household products.",
+      "Completely eliminate plastic utensils & straws at home.",
+      "Join or organize a community cleanup to remove plastic waste.",
+      "Advocate for plastic-free policies at your workplace or school."
+    ]
+  },
+  {
+    "goal": "save-energy",
+    "level": "beginner",
+    "task": [
+      "Turn off lights when leaving a room.",
+      "Unplug electronics when not in use.",
+      "Use a power strip to turn off multiple devices at once.",
+      "Let clothes air dry instead of using a dryer.",
+      "Use energy-efficient LED bulbs instead of incandescent ones."
+    ]
+  },
+  {
+    "goal": "save-energy",
+    "level": "intermediate",
+    "task": [
+      "Keep your fridge full (less empty space = less energy needed).",
+      "Set your thermostat 2°F lower in winter and higher in summer.",
+      "Use a fan instead of air conditioning when possible.",
+      "Reduce screen brightness on electronic devices to save energy.",
+      "Turn off your computer/laptop when not in use instead of sleep mode."
+    ]
+  },
+  {
+    "goal": "save-energy",
+    "level": "advanced",
+    "task": [
+      "Cook with a lid on pots to use less energy.",
+      "Switch to a renewable energy provider if available.",
+      "Install blackout curtains or use reflective window film to regulate indoor temperature.",
+      "Completely eliminate standby power consumption by unplugging all devices when not in use.",
+      "Avoid using electric space heaters—layer up instead."
+    ]
+  },
+  {
+    "goal": "waste-less-water",
+    "level": "beginner",
+    "task": [
+      "Turn off the tap while brushing your teeth.",
+      "Take a 5-minute shower instead of a long one.",
+      "Use a full load when washing clothes or dishes.",
+      "Water plants in the early morning or evening to reduce evaporation.",
+      "Reuse cooking water (e.g., for watering plants)."
+    ]
+  },
+  {
+    "goal": "waste-less-water",
+    "level": "intermediate",
+    "task": [
+      "Collect rainwater for watering plants or cleaning.",
+      "Fix leaky faucets and pipes to prevent water waste.",
+      "Use a dishwasher instead of handwashing (if you have one—it saves water!).",
+      "Switch to a water-efficient showerhead or faucet aerator.",
+      "Use leftover drinking water to water plants instead of pouring it out."
+    ]
+  },
+  {
+    "goal": "waste-less-water",
+    "level": "advanced",
+    "task": [
+      "Install a greywater system to reuse water from sinks & showers.",
+      "Replace your lawn with drought-tolerant plants or a garden.",
+      "Install a dual-flush toilet to use less water per flush.",
+      "Avoid baths—stick to short showers.",
+      "Advocate for water conservation policies in your workplace or community."
+    ]
+  },
+  {
+    "goal": "random",
+    "level": "beginner",
+    "task": [
+      "Recycle one plastic, paper, or glass item today.",
+      "Eat a plant-based meal once a week to reduce your carbon footprint.",
+      "Pick up litter during a walk outside.",
+      "Share a sustainability tip with a friend or on social media.",
+      "Use public transport, bike, or walk instead of driving."
+    ]
+  },
+  {
+    "goal": "random",
+    "level": "intermediate",
+    "task": [
+      "Start a compost bin for food scraps.",
+      "Reduce food waste by planning meals ahead.",
+      "Buy second-hand clothes instead of new ones.",
+      "Switch to eco-friendly cleaning products.",
+      "Reduce paper waste—opt for digital receipts & notes."
+    ]
+  },
+  {
+    "goal": "random",
+    "level": "advanced",
+    "task": [
+      "Set up a home vegetable or herb garden.",
+      "Install solar panels or use a portable solar charger.",
+      "Completely eliminate single-use plastics from your household.",
+      "Join a community sustainability group or initiative.",
+      "Write to a local representative about environmental issues."
+    ]
+  }
+]
