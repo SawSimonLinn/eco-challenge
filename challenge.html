@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenges</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="userGreeting">Welcome, Challenger! 🌱</h1>
+      <p id="userGoal">Your Goal: Loading...</p>
+      <p id="userExperience">Experience Level: Loading...</p>
+    </header>
+
+    <h2>Today's Challenges:</h2>
+    <ul id="challengeList"></ul>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Retrieve user data from localStorage
+        const userName = localStorage.getItem("userName") || "Challenger";
+        const goal = localStorage.getItem("goal") || "random";
+        const experience = localStorage.getItem("experience") || "beginner";
+
+        document.getElementById(
+          "userGreeting"
+        ).textContent = `Welcome, ${userName}! 🌱`;
+        document.getElementById(
+          "userGoal"
+        ).textContent = `Your Goal: ${goal.replace("-", " ")}`;
+        document.getElementById(
+          "userExperience"
+        ).textContent = `Experience Level: ${
+          experience.charAt(0).toUpperCase() + experience.slice(1)
+        }`;
+
+        try {
+          // Fetch challenges from backend
+          const response = await fetch(
+            `http://localhost:4000/api/challenges?goal=${goal}&level=${experience}`
+          );
+          const data = await response.json();
+
+          const challengeList = document.getElementById("challengeList");
+          challengeList.innerHTML = "";
+
+          data.forEach((challenge) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<input type="checkbox"> ${challenge.task}`;
+            challengeList.appendChild(li);
+          });
+        } catch (error) {
+          console.error("Error fetching challenges:", error);
+          document.getElementById(
+            "challengeList"
+          ).innerHTML = `<p>Failed to load challenges.</p>`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/logo.png" />
     <title>Eco Challenge</title>
     <link rel="stylesheet" href="pages/index.css" />
-    <link rel="icon" type="image/png" href="./images/logo.png" />
   </head>
   <body>
     <div class="page">
@@ -35,6 +35,7 @@
                 type="button"
                 href="#challenges"
                 class="nav__link nav__link-challenge-btn"
+                id="startChallenge"
               >
                 Start Challenge
               </button>
@@ -211,6 +212,43 @@
         </ul>
       </section>
       <footer class="footer"></footer>
+
+      <!-- *** Modal for User Information ***  -->
+      <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 class="modal-content__title">Customize Your Eco Challenge!</h2>
+          <form class="modal-content__form" id="challengeForm">
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+
+            <label>Sustainability Goal:</label>
+            <select id="goal">
+              <option value="reduce-plastic">Reduce Plastic</option>
+              <option value="save-energy">Save Energy</option>
+              <option value="waste-less-water">Waste Less Water</option>
+            </select>
+
+            <label>Challenge Type:</label>
+            <input type="checkbox" name="challengeType" value="daily" /> Daily
+            <input type="checkbox" name="challengeType" value="weekly" /> Weekly
+
+            <label>Experience Level:</label>
+            <select id="experience">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+
+            <label>Email (Optional):</label>
+            <input type="email" id="email" placeholder="Your Email" />
+
+            <button type="submit">Continue</button>
+          </form>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
     </div>
   </body>
 </html>
