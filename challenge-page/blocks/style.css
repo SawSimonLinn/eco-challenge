@@ -38,6 +38,7 @@ body {
   font-weight: bold;
   color: white;
   margin-left: 104px;
+  border: none;
 }
 
 .navbar__logo-img {
@@ -45,7 +46,6 @@ body {
   width: 40px;
   height: 40px;
   border: none;
-  background-color: transparent;
 }
 
 /* Wrapper for links */
