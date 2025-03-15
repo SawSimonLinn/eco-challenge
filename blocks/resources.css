@@ -1,0 +1,14 @@
+.resources__title {
+  padding-top: 123px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.resources__description {
+  color: white;
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+  padding-top: 9px;
+}
