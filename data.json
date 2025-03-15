@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Energy Saving",
+    "image": "energy-saving.jpg",
+    "description": "Turn off lights when not in use to save electricity."
+  },
+  {
+    "title": "Water Conservation",
+    "image": "water-conservation.jpg",
+    "description": "Use water-efficient appliances and take shorter showers."
+  },
+  {
+    "title": "Plastic Reduction",
+    "image": "plastic-reduction.jpg",
+    "description": "Avoid single-use plastics and opt for reusable items."
+  },
+  {
+    "title": "Eco-Friendly Transportation",
+    "image": "transportation.jpg",
+    "description": "Use public transport, bike, or walk instead of driving."
+  },
+  {
+    "title": "Sustainable Shopping",
+    "image": "sustainable-shopping.jpg",
+    "description": "Support brands that prioritize sustainability and ethical production."
+  }
+]

@@ -5,10 +5,9 @@
   font-family: Arial, sans-serif;
   max-width: 1232px;
   max-height: 530px;
-  margin-left: 104px;
-  margin-right: 104px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  padding: 0;
 }
 
 /* Container for spacing */
@@ -69,6 +68,7 @@
 
 /* Middle Section */
 .footer-middle {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -131,12 +131,13 @@
 /* Bottom Section */
 .footer-bottom {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
+  /* flex-wrap: wrap; */
   border-top: 1px solid #777;
   padding-top: 15px;
-  text-align: center;
 }
 
 .team-links {
