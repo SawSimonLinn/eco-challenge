@@ -41,7 +41,7 @@ body {
 }
 
 .navbar__logo-img {
-  background-image: url(../images/logo.png);
+  background-image: url(../images/logoimg.svg);
   width: 40px;
   height: 40px;
   border: none;
