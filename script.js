@@ -47,20 +47,21 @@ newTipButton.addEventListener("click", getRandomTip);
 getRandomTip();
 
 const modal = document.getElementById("userModal");
-const startButton = document.getElementById("startChallenge");
+const startButtons = document.querySelectorAll("#startChallenge");
 const closeButton = document.querySelector(".close-btn");
 
-// Show the modal when "Start Challenge" is clicked
-startButton.addEventListener("click", () => {
+function showModal() {
   modal.style.display = "flex";
+}
+
+startButtons.forEach(button => {
+  button.addEventListener("click", showModal);
 });
 
-// Close the modal when the close button is clicked
 closeButton.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// Close the modal when clicking outside of the modal content
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.style.display = "none";

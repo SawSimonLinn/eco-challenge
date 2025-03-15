@@ -32,6 +32,7 @@
   border: none;
   margin: 0 auto;
   margin-top: 76px;
+  cursor: pointer;
 }
 
 .header__footer {
