@@ -1,92 +1,64 @@
 .footer {
   background-color: #555;
   color: white;
-
   font-family: Arial, sans-serif;
-  max-width: 1232px;
-  max-height: 530px;
-  margin-left: 104px;
-  margin-right: 104px;
+  width: 1232px;
+  padding: 0;
+  margin: 0 104px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-/* Container for spacing */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
-/* Top Section */
-.footer-top {
+.footer__nav-bar{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #777;
+  flex-direction: row;
+  padding-top: 57px;
+  padding-left: 53px;
+  padding-right: 53px;
 }
 
-.footer__logo {
-  display: flex;
-  align-items: center;
+.footer__logo{
+  font-family: "Montserrat-Regular";
   font-size: 20px;
-  font-weight: bold;
-  gap: 10px;
-}
-
-.footer__logo-img {
-  width: 40px;
-  height: 34px;
-}
-
-/* Navigation Links */
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  gap: 20px;
-}
-
-.footer-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  gap: 15px;
   align-items: center;
 }
 
-.social-icons img {
-  width: 25px;
-  height: 25px;
-}
-
-/* Middle Section */
-.footer-middle {
+.footer__links {
   display: flex;
+  max-width: 587px;
+  margin-left: 90px;
+  margin-right: 120px;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px 0;
-  gap: 20px;
+  font-family: "Montserrat-Regular";
+  font-size: 20px;
+  flex-grow: 1;
+  gap: 39px;
 }
 
-.contact-info {
-  flex: 1;
-  min-width: 280px;
+.footer__links a {
+  color: white; 
+  text-decoration: none;
+}
+
+.footer__information-contact {
+  width: 400px;
+  height: 213px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 53px;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-info p {
   margin: 5px 0;
 }
 
-/* Subscription Box */
 .subscribe {
   display: flex;
   align-items: center;
@@ -129,13 +101,13 @@
 }
 
 /* Bottom Section */
-.footer-bottom {
+.footer__github-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   border-top: 1px solid #777;
-  padding-top: 15px;
+  padding-top: 46px ;
   text-align: center;
 }
 
