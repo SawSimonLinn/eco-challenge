@@ -1,10 +1,12 @@
 .footer {
   background-color: #555;
   color: white;
-  padding: 30px 50px;
+
   font-family: Arial, sans-serif;
-  max-width: calc(100% - 208px); /* Keeps left and right margins at 104px */
-  margin: 0 auto; /* Centers footer */
+  max-width: 1232px;
+  max-height: 530px;
+  margin-left: 104px;
+  margin-right: 104px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
