@@ -1,5 +1,5 @@
 .cards {
-margin-bottom: 148px;
+  margin-bottom: 148px;
 }
 
 .card__large {
@@ -18,7 +18,7 @@ margin-bottom: 148px;
 
 .card__large-content {
   padding: 23px 32px 32px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   margin: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -43,7 +43,7 @@ margin-bottom: 148px;
   padding-bottom: 90px;
   padding-left: 30px;
   padding-top: 150px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   max-width: 258px;
   border-radius: 25px;
   max-height: 303px;
