@@ -174,9 +174,9 @@
         <div class="container">
           <div class="expanded-card" id="expanded-card">
             <div class="hidden-content">
-              <img  src="" alt="" />
+              <img src="" alt="" />
             </div>
-            <h3 >Loading...</h3>
+            <h3>Loading...</h3>
             <div class="hidden-content">
               <p></p>
             </div>
@@ -325,16 +325,17 @@
             <label class="modal-content__form-label"
               >Preferred Challenge Type:</label
             >
-            <option class="modal-content__form-label_checkbox">
-              <option
+            <div class="modal-content__form-label_checkbox">
+              <input
                 type="checkbox"
                 checked
                 name="challengeType"
                 value="daily"
               />
-              Daily</option>
-              <option type="checkbox" name="challengeType" value="weekly" >
-              Weekly  </option>
+              Daily
+
+              <input type="checkbox" name="challengeType" value="weekly" />
+              Weekly
             </div>
 
             <button class="modal-content__form_btn" type="submit">
