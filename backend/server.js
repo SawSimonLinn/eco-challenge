@@ -14,7 +14,7 @@ dotenv.config({ path: "./config/config.env" });
 // Connect to Database
 connectDB();
 
-app.use(cors({ origin: "http://ecochallenge.online" }));
+app.use(cors());
 app.use(express.json());
 
 // Middleware to serve static files (HTML, CSS, JS)
