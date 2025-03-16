@@ -33,10 +33,10 @@
   display: flex;
   align-items: center;
 
-  padding: 26px 0 26px 58px;
+  padding: 20px 58px;
   margin: 0 0 14px 0;
   width: 880px;
-  /* height: 102px; */
+  height: 102px;
   background-color: #fff;
   border-radius: 0 58px;
   box-shadow: 0 5px #000;

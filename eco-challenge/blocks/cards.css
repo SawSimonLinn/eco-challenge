@@ -10,16 +10,31 @@
 .expanded-card {
   background: #4caf50;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 25px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: start;
   box-shadow: 0 5px #fff;
   height: 626px;
+}
+.card__title {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 23px 32px 0 32px;
+  margin: 0;
+}
+.card__description {
+  padding: 32px 32px 0 32px;
+  margin: 0 0 32px 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 32px;
+  height: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis [...];
 }
 .side-cards {
   display: grid;
@@ -38,10 +53,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.expanded-card img {
+.card__img {
   max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
+  border-radius: 25px 25px 0 0;
+
+  top: 0;
 }
 .hidden-content {
   display: none;

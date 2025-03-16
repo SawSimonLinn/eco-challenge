@@ -1,0 +1,157 @@
+.challenge__page {
+  background: url("../images/challenge-background.png") center / cover no-repeat
+    fixed;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.challenge__page_header {
+  padding: 41px 68px 80px 62px;
+  background: #fff;
+  width: 384px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.challenge__progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.challenge__progress_desc {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+.challenge__progress_title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.challenge__progress__counter_text-desc {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 7px 0 19px 0;
+  font-weight: 400;
+  color: #000;
+}
+
+.challenge__checkbox-text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+  font-weight: 500;
+}
+
+.challenge__completed {
+  background-color: #4caf50;
+  box-shadow: 0 5px #fff;
+  color: #fff;
+}
+
+.challenge__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.challenge__links_item {
+  list-style: none;
+}
+
+.challenge__link {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.challenge__link:hover {
+  color: #4caf50;
+}
+
+.challenge__user-information {
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.challenge__progress-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 880px;
+  margin: 20px auto;
+  position: relative;
+}
+.challenge__progress-steps div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #9b9b9b;
+  border: 1px solid #9b9b9b;
+  text-align: center;
+
+  line-height: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+.challenge__progress-steps div.completed {
+  border: none;
+  background: #4caf50 url("../images/check__complete.png") center no-repeat;
+  color: transparent;
+}
+
+.challenge__progress-steps__line {
+  top: 50%;
+  width: 17%;
+  margin: 22px 0 0 0;
+  border-top: 2px solid #9b9b9b;
+}
+.thank-you-message {
+  display: none;
+  text-align: center;
+  font-size: 42px;
+  color: #4caf50;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.challenges__next-btn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.challenge__next-img {
+  padding: 0 0 0 4px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
