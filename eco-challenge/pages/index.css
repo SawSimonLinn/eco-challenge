@@ -1,5 +1,6 @@
-@import url("../vendor/normalize.css");
-@import url("../vendor/fonts.css");
+@import url("../../vendor/normalize.css");
+@import url("../../vendor/fonts.css");
+
 @import url("../blocks/challengepagestyles.css");
 @import url("../blocks/page.css");
 @import url("../blocks/nav.css");

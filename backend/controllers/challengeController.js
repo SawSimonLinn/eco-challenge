@@ -1,8 +1,14 @@
 const Challenge = require("../models/Challenge");
 
+const loadChallenges = () => {
+  if (!fs.existsSync(FILE_PATH)) return [];
+  return JSON.parse(fs.readFileSync(FILE_PATH, "utf8"));
+};
+
 exports.getChallenges = async (req, res) => {
   try {
     const { goal, level } = req.query;
+    const challenges = loadChallenges();
 
     if (!goal || !level) {
       return res
@@ -10,34 +16,17 @@ exports.getChallenges = async (req, res) => {
         .json({ error: "Goal and experience level are required." });
     }
 
-    const challengeData = await Challenge.findOne({ goal, level });
+    // const challengeData = await Challenge.findOne({ goal, level });
+    const challengeData = challenges.find(
+      (challenge) => challenge.goal === goal && challenge.level === level
+    );
 
     if (!challengeData) {
       return res.status(404).json({ error: "No challenges found." });
     }
 
-    res.json(challengeData.challenges); // Send only the challenges array
+    res.json(challengeData.challenges);
   } catch (error) {
     res.status(500).json({ error: "Error fetching challenges." });
-  }
-};
-
-exports.addChallenge = async (req, res) => {
-  try {
-    const { goal, level, task } = req.body;
-    const newChallenge = new Challenge({ goal, level, task });
-    await newChallenge.save();
-    res.json({ message: "Challenge added", challenge: newChallenge });
-  } catch (error) {
-    res.status(500).json({ error: "Error adding challenge." });
-  }
-};
-
-exports.deleteChallenge = async (req, res) => {
-  try {
-    await Challenge.findByIdAndDelete(req.params.id);
-    res.json({ message: "Challenge deleted" });
-  } catch (error) {
-    res.status(500).json({ error: "Error deleting challenge." });
   }
 };

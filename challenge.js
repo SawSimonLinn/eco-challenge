@@ -3,25 +3,34 @@ document.addEventListener("DOMContentLoaded", async function () {
     "reduce-plastic",
     "save-energy",
     "waste-less-water",
+    "eco-friendly-travel",
+    "sustainable-fashion",
+    "green-home",
+    "zero-waste-lifestyle",
+    "sustainable-food",
     "random",
   ];
-  const experience = localStorage.getItem("experience") || "beginner";
-  const challengeList = document.getElementById("challengeList");
 
-  document.getElementById("userExperience").textContent = ` Level: ${capitalize(
-    experience
-  )}`;
-
-  let userName = localStorage.getItem("userName") || "";
+  // * Set user name
+  const userName = localStorage.getItem("userName") || "";
   document.getElementById(
     "userGreeting"
   ).textContent = `Welcome, ${capitalizeWords(userName)}! 🌱`;
 
+  // * Set user goal
   let currentGoal = localStorage.getItem("currentGoal") || goalList[0];
   document.getElementById("userGoal").textContent = `Your Goal: ${formatGoal(
     currentGoal
   )}`;
 
+  // * Set user experience level
+  const experience = localStorage.getItem("experience") || "beginner";
+  const challengeList = document.getElementById("challengeList");
+  document.getElementById("userExperience").textContent = ` Level: ${capitalize(
+    experience
+  )}`;
+
+  // * Set progress counter
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
@@ -34,6 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     return goal.replace(/-/g, " ").split(" ").map(capitalize).join(" ");
   }
 
+  //
   function loadChallenges(goal) {
     localStorage.setItem("currentGoal", goal);
     document.getElementById("userGoal").textContent = `Your Goal: ${formatGoal(
@@ -41,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     )}`;
 
     fetch(
-      `http://localhost:5501/api/challenges?goal=${goal}&level=${experience}`
+      `https://eco-challenge.onrender.com/api/challenges?goal=${goal}&level=${experience}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -78,18 +88,18 @@ document.addEventListener("DOMContentLoaded", async function () {
           const progressCounter = document.getElementById("progressCounter");
           progressCounter.textContent = `You've completed ${completedCount} out of 5 tasks today! Keep going!`;
 
-          // Add or remove 'completed' class on <li> when checkbox is checked
+          //???? Update challenge list
           document
             .querySelectorAll(".challenge__checkbox-input")
             .forEach((checkbox) => {
-              const li = checkbox.closest("li"); // Get the parent <li>
+              const li = checkbox.closest("li");
               const spam = li.querySelector(".challenge__checkbox-text");
               if (checkbox.checked) {
-                li.classList.add("challenge__completed"); // Add completed class
-                spam.style.color = "white"; // Change text color to white
+                li.classList.add("challenge__completed");
+                spam.style.color = "white";
               } else {
-                li.classList.remove("challenge__completed"); // Remove completed class
-                spam.style.color = ""; // Reset text color
+                li.classList.remove("challenge__completed");
+                spam.style.color = "";
               }
             });
 
@@ -107,17 +117,18 @@ document.addEventListener("DOMContentLoaded", async function () {
           }
         }
 
+        // ??? Clear previous challenges
         selectedChallenges.forEach((challengeText, index) => {
           const li = document.createElement("li");
-          li.classList.add("challenge__checkbox"); // Class for <li>
+          li.classList.add("challenge__checkbox");
 
           const checkbox = document.createElement("input");
           checkbox.type = "checkbox";
           checkbox.classList.add("challenge__checkbox-input");
-          checkbox.checked = index < completedCount; // Restore checked state
+          checkbox.checked = index < completedCount;
 
           const textSpan = document.createElement("span");
-          textSpan.classList.add("challenge__checkbox-text"); // Class for challenge text
+          textSpan.classList.add("challenge__checkbox-text");
           textSpan.textContent = challengeText;
 
           li.appendChild(checkbox);
@@ -125,13 +136,14 @@ document.addEventListener("DOMContentLoaded", async function () {
           challengeList.appendChild(li);
         });
 
+        // ? Update progress on checkbox change
         document
           .querySelectorAll(".challenge__checkbox-input")
           .forEach((checkbox) => {
             checkbox.addEventListener("change", updateProgress);
           });
 
-        updateProgress(); // Ensure progress updates on page load
+        updateProgress();
       })
       .catch((error) => {
         console.error("Error fetching challenges:", error);
@@ -139,27 +151,27 @@ document.addEventListener("DOMContentLoaded", async function () {
       });
   }
 
-  window.setUserGoal = function (selectedGoal) {
-    if (!goalList.includes(selectedGoal)) return;
-    currentGoal = selectedGoal;
-    localStorage.setItem("currentGoal", currentGoal);
-    document.getElementById("userGoal").textContent = `Your Goal: ${formatGoal(
-      currentGoal
-    )}`;
-    loadChallenges(currentGoal);
-  };
-
+  // * Load next challenges
   window.loadNextChallenges = function () {
     let currentIndex = goalList.indexOf(currentGoal);
     let nextGoal = goalList[(currentIndex + 1) % goalList.length];
     currentGoal = nextGoal;
     localStorage.setItem("currentGoal", currentGoal);
+
     document.getElementById("userGoal").textContent = `Your Goal: ${formatGoal(
       currentGoal
     )}`;
-    localStorage.setItem("completedChallenges", 0); // Reset completed count
+
+    // * Reset completed challenges
+    localStorage.setItem("completedChallenges", 0);
+    document.querySelectorAll(".challenge__progress-step").forEach((step) => {
+      step.classList.remove("completed");
+    });
+
     loadChallenges(currentGoal);
+    location.reload(true);
   };
 
+  // * Initial load
   loadChallenges(currentGoal);
 });

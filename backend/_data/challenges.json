@@ -130,5 +130,170 @@
       "Join a community sustainability group or initiative.",
       "Write to a local representative about environmental issues."
     ]
+  },
+  {
+    "goal": "eco-friendly-travel",
+    "level": "beginner",
+    "challenges": [
+      "Walk or bike for short trips instead of driving.",
+      "Carpool with coworkers or friends when commuting.",
+      "Take public transportation instead of driving alone.",
+      "Bring a reusable coffee cup when traveling.",
+      "Avoid single-use plastics while traveling (e.g., hotel toiletries)."
+    ]
+  },
+  {
+    "goal": "eco-friendly-travel",
+    "level": "intermediate",
+    "challenges": [
+      "Choose eco-friendly accommodations when traveling.",
+      "Pack light to reduce fuel consumption in transport.",
+      "Use a refillable water bottle instead of buying bottled water while traveling.",
+      "Support local and sustainable businesses during trips.",
+      "Opt for train travel instead of flying when possible."
+    ]
+  },
+  {
+    "goal": "eco-friendly-travel",
+    "level": "advanced",
+    "challenges": [
+      "Offset your carbon footprint when booking flights.",
+      "Plan a zero-waste trip by packing reusable essentials.",
+      "Avoid cruises due to their high environmental impact.",
+      "Advocate for eco-friendly tourism in your community.",
+      "Choose travel destinations that support conservation efforts."
+    ]
+  },
+  {
+    "goal": "sustainable-fashion",
+    "level": "beginner",
+    "challenges": [
+      "Wear clothes you already own instead of buying new ones.",
+      "Donate clothes instead of throwing them away.",
+      "Repair small damages instead of discarding clothing.",
+      "Buy second-hand clothing instead of new.",
+      "Wash clothes with cold water to save energy."
+    ]
+  },
+  {
+    "goal": "sustainable-fashion",
+    "level": "intermediate",
+    "challenges": [
+      "Host or participate in a clothing swap.",
+      "Support ethical and sustainable clothing brands.",
+      "Reduce laundry frequency to save water and energy.",
+      "Choose natural fibers like organic cotton over synthetic fabrics.",
+      "Avoid fast fashion—invest in quality pieces that last longer."
+    ]
+  },
+  {
+    "goal": "sustainable-fashion",
+    "level": "advanced",
+    "challenges": [
+      "Learn to sew and upcycle old clothing.",
+      "Create a capsule wardrobe to minimize fashion waste.",
+      "Dye or alter clothing instead of replacing them.",
+      "Advocate for ethical labor practices in fashion.",
+      "Completely eliminate fast fashion purchases."
+    ]
+  },
+  {
+    "goal": "green-home",
+    "level": "beginner",
+    "challenges": [
+      "Switch to reusable cleaning cloths instead of paper towels.",
+      "Use natural light instead of artificial lighting during the day.",
+      "Unplug chargers and appliances when not in use.",
+      "Use non-toxic cleaning products for a healthier home.",
+      "Open windows for ventilation instead of using air fresheners."
+    ]
+  },
+  {
+    "goal": "green-home",
+    "level": "intermediate",
+    "challenges": [
+      "Switch to bamboo or biodegradable household items.",
+      "Reduce waste by repurposing items around the house.",
+      "Compost kitchen scraps instead of throwing them away.",
+      "Install a water filter instead of buying bottled water.",
+      "Use motion sensor lights to save energy."
+    ]
+  },
+  {
+    "goal": "green-home",
+    "level": "advanced",
+    "challenges": [
+      "Install solar panels to power your home.",
+      "Replace old appliances with energy-efficient models.",
+      "Grow your own herbs or vegetables indoors.",
+      "Use a rainwater harvesting system for watering plants.",
+      "Advocate for green building policies in your community."
+    ]
+  },
+  {
+    "goal": "zero-waste-lifestyle",
+    "level": "beginner",
+    "challenges": [
+      "Say no to receipts—opt for digital versions.",
+      "Use a handkerchief instead of disposable tissues.",
+      "Bring a reusable shopping bag everywhere.",
+      "Avoid individually wrapped snacks and buy in bulk.",
+      "Recycle paper, glass, and plastic waste properly."
+    ]
+  },
+  {
+    "goal": "zero-waste-lifestyle",
+    "level": "intermediate",
+    "challenges": [
+      "Start making your own DIY natural beauty products.",
+      "Shop at bulk stores and use your own containers.",
+      "Use cloth napkins instead of disposable ones.",
+      "Find creative ways to repurpose household waste.",
+      "Track your trash for a week and identify wasteful habits."
+    ]
+  },
+  {
+    "goal": "zero-waste-lifestyle",
+    "level": "advanced",
+    "challenges": [
+      "Completely eliminate disposable items from your home.",
+      "Create a zero-waste shopping kit (jars, bags, utensils).",
+      "Make homemade cleaning products to reduce packaging waste.",
+      "Live plastic-free for a whole month.",
+      "Organize a zero-waste challenge for your community."
+    ]
+  },
+  {
+    "goal": "sustainable-food",
+    "level": "beginner",
+    "challenges": [
+      "Eat one meat-free meal per week.",
+      "Reduce food waste by storing leftovers properly.",
+      "Choose seasonal fruits and vegetables.",
+      "Drink tap water instead of bottled water.",
+      "Bring your own reusable container for takeout food."
+    ]
+  },
+  {
+    "goal": "sustainable-food",
+    "level": "intermediate",
+    "challenges": [
+      "Support local farmers by shopping at farmers' markets.",
+      "Plan meals in advance to minimize food waste.",
+      "Grow your own herbs or vegetables at home.",
+      "Reduce processed food consumption for a greener diet.",
+      "Make homemade snacks instead of buying packaged ones."
+    ]
+  },
+  {
+    "goal": "sustainable-food",
+    "level": "advanced",
+    "challenges": [
+      "Completely eliminate food waste at home.",
+      "Start a compost bin for food scraps.",
+      "Adopt a plant-based diet for a whole week.",
+      "Only buy organic, fair-trade, or sustainably sourced foods.",
+      "Advocate for sustainable food policies in your community."
+    ]
   }
 ]

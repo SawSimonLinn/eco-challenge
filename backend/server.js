@@ -4,6 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const fs = require("fs");
 const path = require("path");
+const colors = require("colors");
 
 const app = express();
 const PORT = process.env.PORT || 5501;
@@ -20,6 +21,15 @@ app.use(express.json());
 // Middleware to serve static files (HTML, CSS, JS)
 app.use(express.static("public"));
 app.use(express.json());
+
+// Allow frontend to access the backend
+app.use(
+  cors({
+    origin: ["http://ecochallenge.online/", "http://localhost:5501"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 
 // Load challenge data from JSON file
 const dataPath = path.join(__dirname, "_data/challenges.json");
@@ -40,8 +50,9 @@ app.get("/api/challenges", (req, res) => {
 app.use("/api/challenges", require("./routes/challengeRoutes"));
 app.use("/api/progress", require("./routes/progressRoutes"));
 
+// Test Route
 app.get("/", (req, res) => res.send("Eco Challenge API is running!"));
 
 app.listen(PORT, () =>
-  console.log(`✅ Server running at http://localhost:${PORT}`)
+  console.log(`Server running at http://localhost:${PORT}`.cyan.bold)
 );

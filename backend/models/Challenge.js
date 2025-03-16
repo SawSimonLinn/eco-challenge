@@ -9,7 +9,7 @@ const ChallengeSchema = new mongoose.Schema({
   level: {
     type: String,
     required: true,
-    enum: ["easy", "medium", "hard"],
+    enum: ["beginner", "intermediate", "advanced"],
     default: "easy",
   },
   task: {
