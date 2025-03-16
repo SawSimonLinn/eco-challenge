@@ -57,9 +57,9 @@ Eco Challenge is a web application designed to help users achieve their environm
 
     or if you have Nodemon:
 
-        ```bash
-        nodemon server.js
-        ```
+    ```bash
+    nodemon server.js
+    ```
 
 4.  Open index.html in Browser:
 
