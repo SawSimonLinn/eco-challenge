@@ -18,12 +18,11 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
-        // Get user details from localStorage
+        // Retrieve user data from localStorage
         const userName = localStorage.getItem("userName") || "Challenger";
         const goal = localStorage.getItem("goal") || "random";
-        const experience = localStorage.getItem("level") || "beginner";
+        const experience = localStorage.getItem("experience") || "beginner";
 
-        // Display user info
         document.getElementById(
           "userGreeting"
         ).textContent = `Welcome, ${userName}! 🌱`;
@@ -36,20 +35,28 @@
           experience.charAt(0).toUpperCase() + experience.slice(1)
         }`;
 
-        // Fetch challenges from MongoDB through API
         try {
+          // Fetch challenges from backend
           const response = await fetch(
             `http://localhost:5501/api/challenges?goal=${goal}&level=${experience}`
           );
-          const challenges = await response.json();
+          const data = await response.json();
 
           const challengeList = document.getElementById("challengeList");
-          challengeList.innerHTML = ""; // Clear previous items
+          challengeList.innerHTML = "";
 
-          // Loop through challenges and display them
-          challenges.forEach((challenge) => {
+          // Filter to only get the first 5 challenges for the selected goal and experience
+          const selectedChallenges =
+            data
+              .find(
+                (challenge) =>
+                  challenge.goal === goal && challenge.level === experience
+              )
+              ?.challenges.slice(0, 5) || [];
+
+          selectedChallenges.forEach((challengeText) => {
             const li = document.createElement("li");
-            li.innerHTML = `<input type="checkbox" class="task-checkbox"> ${challenge}`;
+            li.innerHTML = `<input type="checkbox"> ${challengeText}`;
             challengeList.appendChild(li);
           });
         } catch (error) {

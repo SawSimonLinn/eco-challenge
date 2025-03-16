@@ -2,7 +2,7 @@
   {
     "goal": "reduce-plastic",
     "level": "beginner",
-    "task": [
+    "challenges": [
       "Bring a reusable water bottle instead of buying plastic bottles.",
       "Use a reusable tote bag instead of plastic bags.",
       "Say no to plastic straws when eating out.",
@@ -13,7 +13,7 @@
   {
     "goal": "reduce-plastic",
     "level": "intermediate",
-    "task": [
+    "challenges": [
       "Carry a set of reusable cutlery when eating out.",
       "Store food in glass or stainless steel containers instead of plastic.",
       "Avoid buying bottled beverages—bring your own cup.",
@@ -24,7 +24,7 @@
   {
     "goal": "reduce-plastic",
     "level": "advanced",
-    "task": [
+    "challenges": [
       "Switch to plastic-free personal care products (e.g., shampoo bars).",
       "Find a local refill station for bulk food or household products.",
       "Completely eliminate plastic utensils & straws at home.",
@@ -35,7 +35,7 @@
   {
     "goal": "save-energy",
     "level": "beginner",
-    "task": [
+    "challenges": [
       "Turn off lights when leaving a room.",
       "Unplug electronics when not in use.",
       "Use a power strip to turn off multiple devices at once.",
@@ -46,7 +46,7 @@
   {
     "goal": "save-energy",
     "level": "intermediate",
-    "task": [
+    "challenges": [
       "Keep your fridge full (less empty space = less energy needed).",
       "Set your thermostat 2°F lower in winter and higher in summer.",
       "Use a fan instead of air conditioning when possible.",
@@ -57,7 +57,7 @@
   {
     "goal": "save-energy",
     "level": "advanced",
-    "task": [
+    "challenges": [
       "Cook with a lid on pots to use less energy.",
       "Switch to a renewable energy provider if available.",
       "Install blackout curtains or use reflective window film to regulate indoor temperature.",
@@ -68,7 +68,7 @@
   {
     "goal": "waste-less-water",
     "level": "beginner",
-    "task": [
+    "challenges": [
       "Turn off the tap while brushing your teeth.",
       "Take a 5-minute shower instead of a long one.",
       "Use a full load when washing clothes or dishes.",
@@ -79,7 +79,7 @@
   {
     "goal": "waste-less-water",
     "level": "intermediate",
-    "task": [
+    "challenges": [
       "Collect rainwater for watering plants or cleaning.",
       "Fix leaky faucets and pipes to prevent water waste.",
       "Use a dishwasher instead of handwashing (if you have one—it saves water!).",
@@ -90,7 +90,7 @@
   {
     "goal": "waste-less-water",
     "level": "advanced",
-    "task": [
+    "challenges": [
       "Install a greywater system to reuse water from sinks & showers.",
       "Replace your lawn with drought-tolerant plants or a garden.",
       "Install a dual-flush toilet to use less water per flush.",
@@ -101,7 +101,7 @@
   {
     "goal": "random",
     "level": "beginner",
-    "task": [
+    "challenges": [
       "Recycle one plastic, paper, or glass item today.",
       "Eat a plant-based meal once a week to reduce your carbon footprint.",
       "Pick up litter during a walk outside.",
@@ -112,7 +112,7 @@
   {
     "goal": "random",
     "level": "intermediate",
-    "task": [
+    "challenges": [
       "Start a compost bin for food scraps.",
       "Reduce food waste by planning meals ahead.",
       "Buy second-hand clothes instead of new ones.",
@@ -123,7 +123,7 @@
   {
     "goal": "random",
     "level": "advanced",
-    "task": [
+    "challenges": [
       "Set up a home vegetable or herb garden.",
       "Install solar panels or use a portable solar charger.",
       "Completely eliminate single-use plastics from your household.",
