@@ -22,6 +22,15 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(express.json());
 
+// Allow frontend to access the backend
+app.use(
+  cors({
+    origin: ["http://ecochallenge.online/", "http://localhost:5501"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
+
 // Load challenge data from JSON file
 const dataPath = path.join(__dirname, "_data/challenges.json");
 let challengeData = [];
@@ -41,6 +50,7 @@ app.get("/api/challenges", (req, res) => {
 app.use("/api/challenges", require("./routes/challengeRoutes"));
 app.use("/api/progress", require("./routes/progressRoutes"));
 
+// Test Route
 app.get("/", (req, res) => res.send("Eco Challenge API is running!"));
 
 app.listen(PORT, () =>
