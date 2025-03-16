@@ -13,22 +13,71 @@
 
 .modal-content {
   background: white;
-  padding: 20px;
+  padding: 35px 53px;
   text-align: center;
   width: 441px;
-  height: 574px;
+  /* height: 574px; */
   border-radius: 5px;
   position: relative;
+}
+
+.modal-content__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.modal-content__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* gap: 20px; */
+}
+
+.modal-content__form-label {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.modal-content__form-input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 0 0 23px 0;
+}
+
+.modal-content__form-label_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.modal-content__form_btn {
+  font-size: 16px;
+  width: 100%;
+  padding: 16px 130px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  margin: 37px 0 0 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content__form_btn:hover {
+  background-color: #45a049;
 }
 
 /* Close Button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
+  top: -70px;
+  right: -40px;
+  font-size: 60px;
   cursor: pointer;
-  color: #333;
+  color: #fff;
 }
 
 .close-btn:hover {

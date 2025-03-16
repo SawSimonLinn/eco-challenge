@@ -17,6 +17,8 @@
 }
 
 .tips__daily-tip {
+  font-family: "Montaga", serif;
+  padding: 65px 54px 54px 54px;
   margin: 0 auto;
   border-radius: 30px;
   max-width: 1232px;
@@ -27,19 +29,22 @@
 }
 
 .tips__daily-tip-heading {
-  margin: 0 auto;
-  padding-top: 65px;
-  font-size: 40px;
+  font-weight: 400;
+  margin: 0 auto 45px 0;
+  font-size: 46px;
+  height: 104px;
   text-align: center;
-  padding-bottom: 45px;
   line-height: 52px;
 }
 
 .tips__buttons {
-  padding-bottom: 54px;
+  display: flex;
+  gap: 16px;
 }
 
 .tips__share-btn {
+  font-size: 20px;
+  font-family: "Montaga", serif;
   background-color: black;
   padding: 16px 38px;
   color: white;
@@ -47,12 +52,16 @@
 }
 
 .tips__copy-btn {
+  font-size: 20px;
+  font-family: "Montaga", serif;
   padding: 16px 38px;
   background-color: white;
   border-radius: 11px;
 }
 
 .tips__new-tip-btn {
+  font-size: 20px;
+  font-family: "Montaga", serif;
   margin-top: 24px;
   position: absolute;
   right: 104px;

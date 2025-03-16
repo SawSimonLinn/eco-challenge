@@ -7,28 +7,32 @@
 }
 
 .nav__logo {
+  text-decoration: none;
+  color: black;
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
 .nav__links {
-display: flex;
-flex-direction: row;
-list-style-type: none;
-justify-content: space-between;
-align-items: center;
-gap: 39px;
-padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 39px;
+  padding: 0;
 }
 
 .nav__links a {
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .nav__link-challenge-btn {
   padding: 16px 25px;
+  font-size: 20px;
+  font-weight: 300;
   background-color: white;
   border: 1px solid black;
   border-radius: 13px;

@@ -18,3 +18,11 @@
   font-weight: 700;
   src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
+
+
+@font-face {
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url(./fonts//Montaga-Regular.ttf) format("truetype");
+}

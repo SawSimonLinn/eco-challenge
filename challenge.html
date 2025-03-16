@@ -3,62 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./eco-challenge/images/logo.png" />
     <title>Challenges</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./eco-challenge/pages/index.css" />
   </head>
-  <body>
-    <header>
-      <h1 id="userGreeting">Welcome, Challenger! 🌱</h1>
-      <p id="userGoal">Your Goal: Loading...</p>
-      <p id="userExperience">Experience Level: Loading...</p>
+  <body class="challenge__page">
+    <header class="challenge__page_header">
+      <a class="nav__logo" href="index.html">
+        <img
+          src="./eco-challenge/images/eco-challenge-logo.svg"
+          alt=""
+          class="nav__logo-image"
+        />
+        Eco Challenge
+      </a>
+      <div class="challenge__user-information">
+        <p id="userGreeting">Welcome, Challenger! 🌱</p>
+        <p id="userGoal">Your Goal: Loading...</p>
+        <p id="userExperience">Level: Loading...</p>
+      </div>
+      <ul class="challenge__links">
+        <li class="challenge__links_item">
+          <a href="#challenges" class="challenge__link">Challenges</a>
+        </li>
+        <li class="challenge__links_item">
+          <a href="#tips" class="challenge__link">Tips</a>
+        </li>
+        <li class="challenge__links_item">
+          <a href="#learnmore" class="challenge__link">Learn More</a>
+        </li>
+      </ul>
     </header>
 
-    <h2>Today's Challenges:</h2>
-    <ul id="challengeList"></ul>
+    <div class="challenge__progress">
+      <p class="challenge__progress_desc">
+        Complete your tasks and track your progress.
+      </p>
+      <h2 class="challenge__progress_title">Your Eco Challenges for Today!</h2>
+      <p class="challenge__progress__counter_text">Progress Counter</p>
+      <p
+        id="progressCounter"
+        class="challenge__progress__counter_text-desc"
+      ></p>
+      <div class="challenge__progress-steps">
+        <div id="step1">1</div>
+        <span class="challenge__progress-steps__line"></span>
+        <div id="step2">2</div>
+        <span class="challenge__progress-steps__line"></span>
+        <div id="step3">3</div>
+        <span class="challenge__progress-steps__line"></span>
+        <div id="step4">4</div>
+        <span class="challenge__progress-steps__line"></span>
+        <div id="step5">5</div>
+      </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-        // Get user details from localStorage
-        const userName = localStorage.getItem("userName") || "Challenger";
-        const goal = localStorage.getItem("goal") || "random";
-        const experience = localStorage.getItem("level") || "beginner";
+      <ul id="challengeList" class="challenge__list"></ul>
 
-        // Display user info
-        document.getElementById(
-          "userGreeting"
-        ).textContent = `Welcome, ${userName}! 🌱`;
-        document.getElementById(
-          "userGoal"
-        ).textContent = `Your Goal: ${goal.replace("-", " ")}`;
-        document.getElementById(
-          "userExperience"
-        ).textContent = `Experience Level: ${
-          experience.charAt(0).toUpperCase() + experience.slice(1)
-        }`;
+      <div id="thankYouMessage" class="thank-you-message">
+        🎉 Thank you for completing all challenges! 🎉
+      </div>
+      <button
+        id="nextChallengesBtn"
+        class="challenges__next-btn"
+        onclick="loadNextChallenges()"
+      >
+        <img
+          class="challenge__next-img"
+          src="./eco-challenge/images/next.png"
+          alt=""
+        />
+      </button>
+    </div>
 
-        // Fetch challenges from MongoDB through API
-        try {
-          const response = await fetch(
-            `http://localhost:5501/api/challenges?goal=${goal}&level=${experience}`
-          );
-          const challenges = await response.json();
-
-          const challengeList = document.getElementById("challengeList");
-          challengeList.innerHTML = ""; // Clear previous items
-
-          // Loop through challenges and display them
-          challenges.forEach((challenge) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<input type="checkbox" class="task-checkbox"> ${challenge}`;
-            challengeList.appendChild(li);
-          });
-        } catch (error) {
-          console.error("Error fetching challenges:", error);
-          document.getElementById(
-            "challengeList"
-          ).innerHTML = `<p>Failed to load challenges.</p>`;
-        }
-      });
-    </script>
+    <script src="challenge.js"></script>
   </body>
+
+  `
 </html>

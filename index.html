@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./images/logo.png" />
+    <link rel="icon" type="image/png" href="./eco-challenge/images/logo.png" />
     <title>Eco Challenge</title>
     <link rel="stylesheet" href="./eco-challenge/pages/index.css" />
   </head>
@@ -12,14 +12,14 @@
       <!-- *** HEADER *** -->
       <header class="header">
         <nav class="nav">
-          <div class="nav__logo">
+          <a class="nav__logo">
             <img
-              src="./images/eco-challenge-logo.svg"
+              src="./eco-challenge/images/eco-challenge-logo.svg"
               alt=""
               class="nav__logo-image"
             />
             Eco Challenge
-          </div>
+          </a>
           <ul class="nav__links">
             <li>
               <a href="#challenges" class="nav__link">Challenges</a>
@@ -165,53 +165,25 @@
       </section>
 
       <!-- *** RESOURCES *** -->
-      <section id="learnmore" class="resources">
+      <section class="resources">
         <h2 class="resources__title">Learn More & Make a Bigger Impact</h2>
         <p class="resources__description">
           Small changes lead to big results! Here are some tips and resources to
           help you live a more sustainable lifestyle.
         </p>
-        <ul class="cards">
-          <li class="card__large">
-            <img
-              src="./images/soil-in-hands.png"
-              alt="a person holding soil in their hands"
-            />
-            <div class="card__large-content">
-              <h3 class="card__large-title">Energy Saving</h3>
-              <p class="card__large-description">
-                Turn off lights when not in use to save electricity <br />
-                <br />
-                Turn off lights when not in use to save electricity <br />
-                <br />
-                Turn off lights when not in use to save electricity <br />
-                <br />
-                Turn off lights when not in use to save electricity <br />
-                <br />
-              </p>
+        <div class="container">
+          <div class="expanded-card" id="expanded-card">
+            <div class="hidden-content">
+              <img src="" alt="" />
             </div>
-          </li>
-          <div class="cards__small">
-            <li class="card__small">
-              <h3>Water Conservation:</h3>
-              <a href="">More</a>
-            </li>
-            <li class="card__small">
-              <h3>Eco-Friendly Transportation:</h3>
-              <a href="">More</a>
-            </li>
-            <li class="card__small">
-              <h3>Plastic Reduction</h3>
-              <a href="">More</a>
-            </li>
-            <li class="card__small">
-              <h3>Sustainable Shopping</h3>
-              <a href="">More</a>
-            </li>
+            <h3>Loading...</h3>
+            <div class="hidden-content">
+              <p></p>
+            </div>
           </div>
-        </ul>
+          <div class="side-cards" id="side-cards"></div>
+        </div>
       </section>
-
 
       <footer class="footer">
         <div class="footer-container">
@@ -289,35 +261,96 @@
           <span class="close-btn">&times;</span>
           <h2 class="modal-content__title">Customize Your Eco Challenge!</h2>
           <form class="modal-content__form" id="challengeForm">
-            <label>Name:</label>
-            <input type="text" id="name" placeholder="Your Name" required />
+            <label class="modal-content__form-label" for="name">Name:</label>
+            <input
+              class="modal-content__form-input"
+              type="text"
+              id="name"
+              placeholder="Your Surname"
+              required
+            />
 
-            <label>Sustainability Goal:</label>
-            <select id="goal">
+            <label class="modal-content__form-label"
+              >Sustainability Goal:</label
+            >
+            <select class="modal-content__form-input" id="goal">
               <option value="reduce-plastic">Reduce Plastic</option>
               <option value="save-energy">Save Energy</option>
               <option value="waste-less-water">Waste Less Water</option>
+              <option value="waste-less-water">Random</option>
             </select>
 
-            <label>Challenge Type:</label>
-            <input type="checkbox" name="challengeType" value="daily" /> Daily
-            <input type="checkbox" name="challengeType" value="weekly" /> Weekly
-
-            <label>Experience Level:</label>
-            <select id="experience">
+            <label for="experience" class="modal-content__form-label"
+              >Experience Level:</label
+            >
+            <select class="modal-content__form-input" id="experience">
               <option value="beginner">Beginner</option>
               <option value="intermediate">Intermediate</option>
               <option value="advanced">Advanced</option>
             </select>
 
-            <label>Email (Optional):</label>
-            <input type="email" id="email" placeholder="Your Email" />
+            <label class="modal-content__form-label"
+              >Preferred Challenge Type:</label
+            >
+            <div class="modal-content__form-label_checkbox">
+              <input
+                type="checkbox"
+                checked
+                name="challengeType"
+                value="daily"
+              />
+              Daily
 
-            <button type="submit">Continue</button>
+              <input type="checkbox" name="challengeType" value="weekly" />
+              Weekly
+            </div>
+
+            <button class="modal-content__form_btn" type="submit">
+              Continue
+            </button>
           </form>
         </div>
       </div>
+      <script>
+        let data = [];
 
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((fetchedData) => {
+            data = fetchedData;
+            updateLayout(0);
+          });
+
+        function updateLayout(expandedIndex) {
+          const expandedCard = document.getElementById("expanded-card");
+          const sideCardsContainer = document.getElementById("side-cards");
+
+          // Set expanded card content
+          expandedCard.innerHTML = `
+          <div class="hidden-content">
+            <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
+          </div>
+          <h3 class="card__title"> ${data[expandedIndex].title}</h3>
+          <div class="hidden-content">
+            <p class="card__description">${data[expandedIndex].description}</p>
+          </div>
+      `;
+
+          // Populate side cards
+          sideCardsContainer.innerHTML = data
+            .map((item, index) => {
+              if (index !== expandedIndex) {
+                return `
+                  <div class="side-card" onclick="updateLayout(${index})">
+                      <h3>${item.title}</h3>
+                  </div>
+              `;
+              }
+              return "";
+            })
+            .join("");
+        }
+      </script>
       <script src="script.js"></script>
     </div>
   </body>
