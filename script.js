@@ -96,3 +96,81 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
   // Redirect to challenge page
   window.location.href = "challenge.html";
 });
+
+let data = [];
+
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((fetchedData) => {
+            data = fetchedData;
+            updateLayout(0);
+          });
+
+        function updateLayout(expandedIndex) {
+          const expandedCard = document.getElementById("expanded-card");
+          const sideCardsContainer = document.getElementById("side-cards");
+
+          // Set expanded card content
+          expandedCard.innerHTML = `
+          <div class="hidden-content">
+            <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
+          </div>
+          <h3 class="card__title"> ${data[expandedIndex].title}</h3>
+          <div class="hidden-content">
+            <p class="card__description">${data[expandedIndex].description}</p>
+          </div>
+      `;
+
+          // Populate side cards
+          sideCardsContainer.innerHTML = data
+            .map((item, index) => {
+              if (index !== expandedIndex) {
+                return `
+                  <div class="side-card" onclick="updateLayout(${index})">
+                      <h3>${item.title}</h3>
+                  </div>
+              `;
+              }
+              return "";
+            })
+            .join("");
+        }
+
+          // JavaScript to handle the subscription process
+  function subscribeUser() {
+    var email = document.getElementById("subscribe-email").value;
+
+    // Check if email is valid
+    if (validateEmail(email)) {
+        // Call the backend API (replace with your actual API URL)
+        fetch('your-backend-api-url', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email }),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Subscription successful! You will receive your daily challenge.');
+                // Reset input field
+                document.getElementById("subscribe-email").value = '';
+            } else {
+                alert('Something went wrong, please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error. Please try again later.');
+        });
+    } else {
+        alert('Please enter a valid email address.');
+    }
+  }
+
+  // Simple email validation
+  function validateEmail(email) {
+    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+  }
+

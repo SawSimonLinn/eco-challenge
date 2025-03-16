@@ -5,7 +5,7 @@
   font-family: Arial, sans-serif;
   max-width: 1232px;
   padding: 0;
-  margin: 0 104px;
+  margin: 0 auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   display: flex;
@@ -68,6 +68,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-top: 76px;
 }
 
 .footer__information-contact {
@@ -118,6 +119,7 @@
   border-radius: 8px;
 }
 
+
 .footer__email-input {
   width: 359px;
   height: 70px;
@@ -126,6 +128,7 @@
   border-radius: 5px;
   font-size: 16px;
   background-color: black;
+  color: white;
   border: 1px solid #fff;
 }
 
@@ -134,7 +137,6 @@
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  padding-left: 20px;
 }
 
 .footer__subs-btn {

@@ -165,7 +165,7 @@
       </section>
 
       <!-- *** RESOURCES *** -->
-      <section class="resources">
+      <section id="learnmore" class="resources">
         <h2 class="resources__title">Learn More & Make a Bigger Impact</h2>
         <p class="resources__description">
           Small changes lead to big results! Here are some tips and resources to
@@ -311,46 +311,6 @@
           </form>
         </div>
       </div>
-      <script>
-        let data = [];
-
-        fetch("data.json")
-          .then((response) => response.json())
-          .then((fetchedData) => {
-            data = fetchedData;
-            updateLayout(0);
-          });
-
-        function updateLayout(expandedIndex) {
-          const expandedCard = document.getElementById("expanded-card");
-          const sideCardsContainer = document.getElementById("side-cards");
-
-          // Set expanded card content
-          expandedCard.innerHTML = `
-          <div class="hidden-content">
-            <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
-          </div>
-          <h3 class="card__title"> ${data[expandedIndex].title}</h3>
-          <div class="hidden-content">
-            <p class="card__description">${data[expandedIndex].description}</p>
-          </div>
-      `;
-
-          // Populate side cards
-          sideCardsContainer.innerHTML = data
-            .map((item, index) => {
-              if (index !== expandedIndex) {
-                return `
-                  <div class="side-card" onclick="updateLayout(${index})">
-                      <h3>${item.title}</h3>
-                  </div>
-              `;
-              }
-              return "";
-            })
-            .join("");
-        }
-      </script>
       <script src="script.js"></script>
     </div>
   </body>
