@@ -4,6 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const fs = require("fs");
 const path = require("path");
+const colors = require("colors");
 
 const app = express();
 const PORT = process.env.PORT || 5501;
@@ -43,5 +44,5 @@ app.use("/api/progress", require("./routes/progressRoutes"));
 app.get("/", (req, res) => res.send("Eco Challenge API is running!"));
 
 app.listen(PORT, () =>
-  console.log(`✅ Server running at http://localhost:${PORT}`)
+  console.log(`Server running at http://localhost:${PORT}`.cyan.bold)
 );

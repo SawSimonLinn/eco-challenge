@@ -1,13 +1,9 @@
 const express = require("express");
-const {
-  getChallenges,
-  addChallenge,
-  deleteChallenge,
-} = require("../controllers/challengeController");
+const { getChallenges } = require("../controllers/challengeController");
+
 const router = express.Router();
 
+// Routes
 router.get("/", getChallenges);
-router.post("/", addChallenge);
-router.delete("/:id", deleteChallenge);
 
 module.exports = router;
