@@ -1,25 +1,38 @@
 .footer {
   background-color: #555;
+  position: relative;
   color: white;
   font-family: Arial, sans-serif;
-  width: 1232px;
+  max-width: 1232px;
   padding: 0;
   margin: 0 104px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin:  0 53px;
+  height: 520px;
 }
 
-.footer__nav-bar{
+
+.footer__nav-bar {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
   padding-top: 57px;
-  padding-left: 53px;
-  padding-right: 53px;
+}
+
+.footer__logo,
+.footer__links,
+.social-icons {
+    display: flex;
+    align-items: center;
 }
 
 .footer__logo{
@@ -28,168 +41,157 @@
   align-items: center;
 }
 
+.footer__logo {
+  gap: 10px; 
+}
+
 .footer__links {
-  display: flex;
-  max-width: 587px;
-  margin-left: 90px;
-  margin-right: 120px;
-  justify-content: space-between;
-  font-family: "Montserrat-Regular";
-  font-size: 20px;
-  flex-grow: 1;
-  gap: 39px;
+  gap: 30px;
 }
 
 .footer__links a {
-  color: white; 
+  color: #FFFFFF;
   text-decoration: none;
+  font-family: "Montserrat-Regular";
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.footer__information-contact {
+.social-icons {
+  gap: 15px;
+}
+
+.footer__contact{
+  display: flex;
   width: 400px;
   height: 213px;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 53px;
   align-items: center;
-  gap: 20px;
+  padding-top: 76px;
 }
 
-.contact-info p {
-  margin: 5px 0;
-}
-
-.subscribe {
+.footer__information-contact {
   display: flex;
-  align-items: center;
-  background: black;
-  padding: 8px;
-  border-radius: 8px;
-  max-width: 320px;
-  height: 45px;
-  justify-content: space-between;
+  flex-direction: column; 
+  gap: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer__information-contact a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer__contact-email {
+  padding: 31px 0;
+}
+
+.footer__contact-phone{
+  padding-bottom: 31px;
+}
+
+.footer__subs-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 159px;
+  right: 53px;
   width: 100%;
+
 }
 
-.subscribe input {
-  background: transparent;
-  border: none;
-  padding: 10px;
-  color: white;
-  flex: 1;
-  outline: none;
-  font-size: 16px;
-}
-
-.subscribe input::placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-.subscribe button {
-  background: white;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
+.footer__subs-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px; /* Ensures proper button width */
+  gap: 15px;
+  width: 632px;
+  height: 213px;
+  background-color: black;
+  border-radius: 8px;
 }
 
-/* Bottom Section */
+.footer__email-input {
+  width: 359px;
+  height: 70px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: black;
+  border: 1px solid #fff;
+}
+
+.footer__email-input::placeholder {
+  color: #FFFFFF;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.footer__subs-btn {
+  width: 190px;
+  height: 70px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
 .footer__github-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  padding: 0 53px;
   border-top: 1px solid #777;
-  padding-top: 46px ;
-  text-align: center;
+  flex-wrap: nowrap;
+  bottom: 21px; 
+  left: 0;
 }
 
-.team-links {
+
+.footer__contributors {
   display: flex;
+  padding-top: 46px ;
+  padding-bottom: 21px;
   gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.team-links a {
-  color: white;
+.footer__contributors a {
+  color: #FFFFFF;
   text-decoration: none;
-  font-size: 14px;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-/* 📱 Responsive Adjustments */
-@media (max-width: 1024px) {
-  .footer {
-    max-width: calc(100% - 80px); /* Smaller margins */
-    padding: 20px;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-nav {
-    justify-content: center;
-  }
-
-  .footer-middle {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .subscribe {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
+.footer__contributor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 20px;
-  }
-
-  .footer-middle {
-    text-align: center;
-  }
-
-  .subscribe {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    max-width: calc(100% - 40px);
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .team-links {
-    flex-direction: column;
-    gap: 5px;
-  }
+.footer__copyright{
+  width: 199px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
 }
