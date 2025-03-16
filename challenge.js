@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     )}`;
 
     fetch(
-      `http://localhost:5501/api/challenges?goal=${goal}&level=${experience}`
+      `https://eco-challenge.onrender.com/api/challenges?goal=${goal}&level=${experience}`
     )
       .then((response) => response.json())
       .then((data) => {

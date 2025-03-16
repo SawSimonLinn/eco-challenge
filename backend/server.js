@@ -14,7 +14,7 @@ dotenv.config({ path: "./config/config.env" });
 // Connect to Database
 connectDB();
 
-app.use(cors());
+app.use(cors({ origin: "http://ecochallenge.online" }));
 app.use(express.json());
 
 // Middleware to serve static files (HTML, CSS, JS)
@@ -22,8 +22,8 @@ app.use(express.static("public"));
 app.use(express.json());
 
 // Load challenge data from JSON file
-const dataPath = path.join(__dirname, "challenges.json");
-let challengeData;
+const dataPath = path.join(__dirname, "_data/challenges.json");
+let challengeData = [];
 try {
   challengeData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 } catch (error) {
