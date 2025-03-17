@@ -175,3 +175,19 @@ document.addEventListener("DOMContentLoaded", async function () {
   // * Initial load
   loadChallenges(currentGoal);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.getElementById("sidebar");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Open Sidebar
+  openBtn.addEventListener("click", function () {
+    sidebar.classList.add("active");
+  });
+
+  // Close Sidebar
+  closeBtn.addEventListener("click", function () {
+    sidebar.classList.remove("active");
+  });
+});
