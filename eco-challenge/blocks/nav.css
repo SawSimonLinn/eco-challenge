@@ -14,6 +14,15 @@
   gap: 14px;
 }
 
+.nav__links li {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__links li:hover {
+  text-decoration: underline;
+}
+
 .nav__links {
   display: flex;
   flex-direction: row;
@@ -37,4 +46,21 @@
   border: 1px solid black;
   border-radius: 13px;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+  .nav {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav__links {
+    gap: 20px;
+  }
+
+  .nav__link-challenge-btn {
+    display: none;
+  }
 }
