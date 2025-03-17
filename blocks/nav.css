@@ -87,9 +87,14 @@
 
   .nav__links {
     gap: 20px;
+    font-size: 16px;
   }
 
   .nav__link-challenge-btn {
     display: none;
+  }
+
+  .nav__logo {
+    font-size: 20px;
   }
 }

@@ -276,6 +276,11 @@
 
   .footer__nav-bar {
     padding: 40px 0 0 0;
+    justify-content: center;
+  }
+
+  .footer__information-contact{
+    font-size: 16px;
   }
 
   .footer__subs-box {
@@ -285,9 +290,11 @@
     width: 100%;
     width: 310px;
   }
+
   .footer__email-input {
     width: 100%;
   }
+
   .footer__subs-btn {
     width: 100%;
     margin-top: 20px;
@@ -301,6 +308,7 @@
 
   .footer__logo {
     order: 1;
+    font-size: 16px;
   }
 
   .social-icons {
@@ -311,6 +319,10 @@
     order: 3;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .footer__links a{
+    font-size: 16px;
   }
 
   .footer__github-links {

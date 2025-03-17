@@ -85,6 +85,15 @@
     padding: 0 20px;
   }
 
+  .challenges__description {
+    font-size: 16px;
+    padding: 30px 20px;
+  }
+
+  .challenges__title {
+    font-size: 25px;
+  }
+
   .challenge__checkbox-text {
     display: flex;
     margin: 0 0 0 10px;
@@ -95,8 +104,13 @@
 
   .challenge__checkbox-text__title {
     align-self: self-start;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
+  }
+
+  .challenge__checkbox-text__desc {
+    font-size: 16px;
+    line-height: 16px;
   }
 
   .challenge__checkbox {

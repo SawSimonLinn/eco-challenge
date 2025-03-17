@@ -77,6 +77,28 @@
   }
 
   .header__title {
+    font-size: 25px;
+    padding: 20px;
+  }
+
+  .header__description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .header__challenge-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin-top: 20px;
+  }
+
+  .header__footer {
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
+/* .header__title {
     font-size: 36px;
     padding: 60px 20px 20px;
   }
@@ -91,7 +113,7 @@
     padding: 20px 50px;
     margin-top: 150px;
   }
+  
   .header__footer {
     padding: 30px 15px 15px;
-  }
-}
+  }*?

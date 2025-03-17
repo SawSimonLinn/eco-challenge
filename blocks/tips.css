@@ -129,15 +129,10 @@
     width: 100%;
   }
 
-  .tips__share-btn {
+  .tips__share-btn, .tips__copy-btn {
     font-size: 18px;
     padding: 16px 20px;
     width: 50%;
-  }
-  .tips__copy-btn {
-    width: 50%;
-    font-size: 18px;
-    padding: 16px 20px;
   }
 
   .tips__new-tip-btn {
@@ -161,6 +156,12 @@
     font-size: 18px;
     padding: 20px 20px 40px 0;
     margin: 0;
+  }
+
+  .tips__share-btn, .tips__copy-btn {
+    font-size: 16px;
+    padding: 16px;
+    width: 50%;
   }
 
   .tips__daily-tip {
