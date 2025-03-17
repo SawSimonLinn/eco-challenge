@@ -2,7 +2,7 @@
 
 Eco Challenge is a web application designed to help users achieve their environmental goals by completing daily challenges. Users can select their goal and experience level, and the application will provide a list of challenges to complete.
 
-🔗 **Live Demo:** [Eco Challenge]([http://ecochallenge.online/](http://ecochallengeapp.com/)
+🔗 **Live Demo:** [Eco Challenge]([http://ecochallenge.online/](http://ecochallengeapp.com/))
 
 🎨 **Figma Design:** [View on Figma](https://www.figma.com/design/tSYeZDUjFOZ7G8ZbRsG767/Eco-Challenge?node-id=7-510&t=5AUftirmnV0np0ku-1)
 
