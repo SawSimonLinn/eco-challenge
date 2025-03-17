@@ -160,18 +160,20 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
         console.log("Email value:", email);
         
         if (validateEmail(email)) {
-          var templateParams = {
-            email: email,
-            from_name: "Eco Challenge",
-            to_name: "Subscriber",
-            message: "Thank you for subscribing to Eco Challenge!"
-        };
+            var templateParams = {
+                email: email,
+                from_name: "Eco Challenge",
+                to_name: "Subscriber",
+                message: "Thank you for subscribing to Eco Challenge!"
+            };
     
             emailjs.send('service_w5jlgrz', 'template_qnddmom', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Thank you for subscribing!');
-                }, function(error) {
+                    document.getElementById("subscribe-email").value = ""; // Move reset here
+                })
+                .catch(function(error) {
                     console.log('FAILED...', error);
                     alert('Subscription failed. Please try again.');
                 });
