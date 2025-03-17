@@ -25,6 +25,10 @@ const initialCards = [
 
 const navLinks = document.querySelectorAll(".nav__link");
 
+
+emailjs.init('xkn46C2gfGA_ZhitP');
+
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     console.log(`Navigating to ${link.getAttribute("href")}`);
@@ -97,80 +101,81 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
   window.location.href = "challenge.html";
 });
 
-let data = [];
+        let data = [];
 
         fetch("data.json")
-          .then((response) => response.json())
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to load data");
+            }
+            return response.json();
+          })
           .then((fetchedData) => {
+            if (fetchedData.length === 0) {
+              console.error("No data found in JSON");
+              return;
+            }
             data = fetchedData;
             updateLayout(0);
-          });
-
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+        
         function updateLayout(expandedIndex) {
+          if (!data.length) return;
+        
           const expandedCard = document.getElementById("expanded-card");
           const sideCardsContainer = document.getElementById("side-cards");
-
-          // Set expanded card content
+        
           expandedCard.innerHTML = `
-          <div class="hidden-content">
-            <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
-          </div>
-          <h3 class="card__title"> ${data[expandedIndex].title}</h3>
-          <div class="hidden-content">
-            <p class="card__description">${data[expandedIndex].description}</p>
-          </div>
-      `;
-
-          // Populate side cards
+            <div class="hidden-content">
+              <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
+            </div>
+            <h3 class="card__title">${data[expandedIndex].title}</h3>
+            <div class="hidden-content">
+              <p class="card__description">${data[expandedIndex].description}</p>
+            </div>
+          `;
+        
           sideCardsContainer.innerHTML = data
-            .map((item, index) => {
-              if (index !== expandedIndex) {
-                return `
-                  <div class="side-card" onclick="updateLayout(${index})">
-                      <h3>${item.title}</h3>
-                  </div>
-              `;
-              }
-              return "";
-            })
+            .map((item, index) =>
+              index !== expandedIndex
+                ? `<div class="side-card" onclick="updateLayout(${index})">
+                    <h3>${item.title}</h3>
+                  </div>`
+                : ""
+            )
             .join("");
         }
 
-          // JavaScript to handle the subscription process
-  function subscribeUser() {
-    var email = document.getElementById("subscribe-email").value;
 
-    // Check if email is valid
-    if (validateEmail(email)) {
-        // Call the backend API (replace with your actual API URL)
-        fetch('your-backend-api-url', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email: email }),
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Subscription successful! You will receive your daily challenge.');
-                // Reset input field
-                document.getElementById("subscribe-email").value = '';
-            } else {
-                alert('Something went wrong, please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error. Please try again later.');
-        });
-    } else {
-        alert('Please enter a valid email address.');
+
+
+        function validateEmail(email) {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailPattern.test(email);
+      }
+    
+      function subscribeUser() {
+        var email = document.getElementById("subscribe-email").value;
+        console.log("Email value:", email);
+        
+        if (validateEmail(email)) {
+          var templateParams = {
+            email: email,
+            from_name: "Eco Challenge",
+            to_name: "Subscriber",
+            message: "Thank you for subscribing to Eco Challenge!"
+        };
+    
+            emailjs.send('service_w5jlgrz', 'template_qnddmom', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Thank you for subscribing!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Subscription failed. Please try again.');
+                });
+        } else {
+            alert('Please enter a valid email address.');
+        }
     }
-  }
-
-  // Simple email validation
-  function validateEmail(email) {
-    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(email);
-  }
-
