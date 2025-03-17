@@ -3,7 +3,7 @@
     fixed;
   font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
 
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
@@ -268,6 +268,10 @@
   }
 
   .challenge__checkbox-text {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     line-height: 24px;
   }
