@@ -184,7 +184,7 @@
   top: 20px;
 }
 
-@media (max-width: 1309px) and (min-width: 769px) {
+@media screen and (max-width: 1309px) and (min-width: 769px) {
   .challenge__page {
     display: block;
   }
@@ -218,7 +218,7 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 320px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
   .challenge__page {
     display: block;
   }

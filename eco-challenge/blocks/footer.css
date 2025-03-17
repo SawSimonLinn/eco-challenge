@@ -2,15 +2,10 @@
   background-color: #555;
   position: relative;
   color: white;
-  font-family: Arial, sans-serif;
   max-width: 1232px;
   padding: 0;
   margin: 0 auto;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
 .footer-container {
@@ -27,6 +22,12 @@
   padding-top: 57px;
 }
 
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
 .footer__logo,
 .footer__links,
 .social-icons {
@@ -35,7 +36,6 @@
 }
 
 .footer__logo {
-  font-family: "Montserrat-Regular";
   font-size: 20px;
   align-items: center;
 }
@@ -51,7 +51,6 @@
 .footer__links a {
   color: #ffffff;
   text-decoration: none;
-  font-family: "Montserrat-Regular";
   font-size: 20px;
   font-weight: 500;
 }
@@ -61,40 +60,30 @@
 }
 
 .footer__information-contact {
+  font-style: normal;
   display: flex;
   flex-direction: column;
   gap: 20px;
   color: #ffffff;
-  text-decoration: none;
-  font-family: "Montserrat-Regular", sans-serif;
   font-size: 20px;
+  line-height: 30px;
   font-weight: 500;
-  padding-top: 76px;
 }
 
 .footer__information-contact a {
   color: #ffffff;
   text-decoration: none;
-  font-family: "Montserrat-Regular", sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
 
-.footer__contact-email {
-  padding: 31px 0;
-}
-
-.footer__contact-phone {
-  padding-bottom: 31px;
-}
-
-.footer__subs-container {
+.footer__contact {
   display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 133px;
-  right: 53px;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  margin: 78px 0 53px 0;
 }
 
 .footer__subs-box {
@@ -102,19 +91,17 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  width: 632px;
-  height: 213px;
+  padding: 72px 34px;
   background-color: black;
-  border-radius: 8px;
+  border-radius: 20px;
 }
-
 
 .footer__email-input {
   width: 359px;
   height: 70px;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   background-color: black;
   color: white;
@@ -123,7 +110,6 @@
 
 .footer__email-input::placeholder {
   color: #ffffff;
-  font-family: "Montserrat-Regular", sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
@@ -134,7 +120,7 @@
   background-color: #fff;
   color: black;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
 }
@@ -143,9 +129,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   width: 100%;
-  padding: 0 53px;
+  padding: 30px 0;
   border-top: 1px solid #777;
   flex-wrap: nowrap;
   bottom: 21px;
@@ -154,9 +139,8 @@
 
 .footer__contributors {
   display: flex;
-  padding-top: 46px;
-  padding-bottom: 21px;
-  gap: 15px;
+
+  gap: 46px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -164,7 +148,6 @@
 .footer__contributors a {
   color: #ffffff;
   text-decoration: none;
-  font-family: "Montserrat-Regular", sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
@@ -179,31 +162,51 @@
   width: 199px;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Montserrat-Regular", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .footer {
+    width: 100%;
+    height: 100%;
+  }
 
-@media (max-width: 768px) and (min-width: 320px) {
-  .footer{
-    max-width: 590px;
-    max-height: 958px ;
+  .footer__contact {
+    width: 100%;
+    margin: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-container {
-    margin: 0 53px;
-    height: 958px;
+    margin: 0 40px;
+    height: 100%;
   }
 
-  .footer__nav-bar {
-    flex-direction: column;
-    gap: 20px;
+  .footer__subs-box {
+    width: 100%;
   }
 
   .footer__nav-bar {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer__logo {
+    order: 1;
+  }
+
+  .social-icons {
+    order: 1;
+  }
+
+  .footer__links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .footer__logo-social {
@@ -212,71 +215,70 @@
     width: 100%;
   }
 
+  .footer__contributors {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__github-links {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .footer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer__contact {
+    width: 100%;
+    margin: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container {
+    margin: 0 20px;
+    height: 100%;
+  }
+
+  .footer__nav-bar {
+    padding: 40px 0 0 0;
+  }
+
+  .footer__subs-box {
+    width: 100%;
+  }
+
+  .footer__nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
   .footer__logo {
     order: 1;
   }
 
   .social-icons {
-    order: 2;
+    order: 1;
   }
 
   .footer__links {
     order: 3;
     width: 100%;
-    justify-content: center;
-  }
-  
-  .footer__subs-box {
-    gap: 16px;
-    width: 516px;
-    height: 154px;
-  }
-
-  .footer__email-input {
-    width: 210px;
-    height: 50px;
-  }
-
-  .footer__email-input::placeholder {
-    font-size: 16px;
-  }
-
-  .footer__subs-btn {
-    width: 160px;
-    height: 50px;
-    font-size: 16px;
+    justify-content: space-between;
   }
 
   .footer__github-links {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 20px; 
+    justify-content: center;
+    gap: 20px;
   }
-
-  .footer__copyright {
-    order: 2;
-    text-align: center;
-    padding-top: 20px; 
-  }
-
-  .footer__contributors {
-    order: 1;
-    padding-bottom: 0; 
-  }
-
-  .footer__information-contact {
-    font-size: 16px;
-    padding-top: 360px;
-    padding-bottom: 48px;
-    font-size: 16px;
-  }
-  
-  .footer__contact-email {
-    padding: 31px 0;
-  }
-  
-  .footer__contact-phone {
-    padding-bottom: 31px;
-  }
-  
 }

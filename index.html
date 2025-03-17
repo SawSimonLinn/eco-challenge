@@ -73,7 +73,9 @@
               name="daily-challenges"
             />
             <div class="challenge__checkbox-text">
-              <label for="reduce-waste">Reduce Waste</label>
+              <label class="challenge__checkbox-text__title" for="reduce-waste"
+                >Reduce Waste</label
+              >
               <p class="challenge__checkbox-text__desc">
                 Bring a reuseable bag when shopping.
               </p>
@@ -87,7 +89,9 @@
               name="daily-challenges"
             />
             <div class="challenge__checkbox-text">
-              <label for="save-water">Save Water</label>
+              <label class="challenge__checkbox-text__title" for="save-water"
+                >Save Water</label
+              >
               <p class="challenge__checkbox-text__desc">
                 Take a 5-minute shower today.
               </p>
@@ -101,7 +105,9 @@
               name="daily-challenges"
             />
             <div class="challenge__checkbox-text">
-              <label for="save-energy">Save Energy</label>
+              <label class="challenge__checkbox-text__title" for="save-energy"
+                >Save Energy</label
+              >
               <p class="challenge__checkbox-text__desc">
                 Unplug devices when not in use.
               </p>
@@ -115,7 +121,9 @@
               name="daily-challenges"
             />
             <div class="challenge__checkbox-text">
-              <label for="avoid-plastic">Avoid Plastic</label>
+              <label class="challenge__checkbox-text__title" for="avoid-plastic"
+                >Avoid Plastic</label
+              >
               <p class="challenge__checkbox-text__desc">
                 Say no to single-use plastic bags.
               </p>
@@ -129,7 +137,9 @@
               name="daily-challenges"
             />
             <div class="challenge__checkbox-text">
-              <label for="choose-sustainable-transport"
+              <label
+                class="challenge__checkbox-text__title"
+                for="choose-sustainable-transport"
                 >Choose Sustainable Transport</label
               >
               <p class="challenge__checkbox-text__desc">
@@ -198,7 +208,7 @@
             </div>
             <nav class="footer__links">
               <a href="#challenges">Challenges</a>
-              <a href="#tips">Quotes</a>
+              <a href="#tips">Tips</a>
               <a href="#learnmore">Learn More</a>
               <a
                 href="#userModal"
@@ -230,37 +240,37 @@
             </div>
           </div>
           <div class="footer__contact">
-            <div class="footer__information-contact">
+            <address class="footer__information-contact">
               <p>Contact us:</p>
-              <address>
-                <p class="footer__contact-email">
-                  Email:
-                  <a href="mailto:info@ecochallenge.com"
-                    >info@ecochallenge.com</a
-                  >
-                </p>
-                <p class="footer__contact-phone">
-                  Phone: <a href="tel:+13333334444">333-333-4444</a>
-                </p>
-                <p class="footer__contact-address">
-                  Address: 123 Main Blvd, Building 1, Los Angeles, California,
-                  12345
-                </p>
-              </address>
-            </div>
-          </div>
+              <p class="footer__contact-email">
+                Email:
+                <a href="mailto:info@ecochallenge.com"
+                  >info@ecochallengeapp.com</a
+                >
+              </p>
+              <p class="footer__contact-phone">
+                Phone: <a href="tel:+13333334444">333-333-4444</a>
+              </p>
+              <p class="footer__contact-address">
+                Address: 123 Main Blvd, Building 1, Los Angeles, California,
+                12345
+              </p>
+            </address>
 
-          <div class="footer__subs-container">
-            <div class="footer__subs-box">
-              <input
-                class="footer__email-input"
-                type="email"
-                id="subscribe-email"
-                name="email"
-                placeholder="Email"
-                autocomplete="email"
-              />
-              <button class="footer__subs-btn" onclick="subscribeUser()">Subscribe</button>
+            <div class="footer__subs-container">
+              <div class="footer__subs-box">
+                <input
+                  class="footer__email-input"
+                  type="email"
+                  id="subscribe-email"
+                  name="email"
+                  placeholder="Email"
+                  autocomplete="email"
+                />
+                <button class="footer__subs-btn" onclick="subscribeUser()">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
 
@@ -268,43 +278,59 @@
             <p class="footer__copyright">© 2025 We Git Bugs</p>
             <div class="footer__contributors">
               <div class="footer__contributor">
-                <img
-                  src="./eco-challenge/images/githubicon.svg"
-                  alt="gitHub"
-                  class="footer__icon"
-                />
-                <a href="https://github.com/ketessos" class="footer__link"
-                  >Ketelin</a
+                <a
+                  href="https://github.com/ketessos"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <img
+                    src="./eco-challenge/images/githubicon.svg"
+                    alt="gitHub"
+                    class="footer__icon"
+                  />
+                  Ketelin</a
                 >
               </div>
               <div class="footer__contributor">
-                <img
-                  src="./eco-challenge/images/githubicon.svg"
-                  alt="gitHub"
-                  class="footer__icon"
-                />
-                <a href="https://github.com/JadenB22" class="footer__link"
-                  >Jaden</a
+                <a
+                  href="https://github.com/JadenB22"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <img
+                    src="./eco-challenge/images/githubicon.svg"
+                    alt="gitHub"
+                    class="footer__icon"
+                  />
+                  Jaden</a
                 >
               </div>
               <div class="footer__contributor">
-                <img
-                  src="./eco-challenge/images/githubicon.svg"
-                  alt="gitHub"
-                  class="footer__icon"
-                />
-                <a href="https://github.com/averylg13" class="footer__link"
-                  >Avery</a
+                <a
+                  href="https://github.com/averylg13"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <img
+                    src="./eco-challenge/images/githubicon.svg"
+                    alt="gitHub"
+                    class="footer__icon"
+                  />
+                  Avery</a
                 >
               </div>
               <div class="footer__contributor">
-                <img
-                  src="./eco-challenge/images/githubicon.svg"
-                  alt="gitHub"
-                  class="footer__icon"
-                />
-                <a href="https://github.com/SawSimonLinn" class="footer__link"
-                  >Simon</a
+                <a
+                  href="https://github.com/SawSimonLinn"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <img
+                    src="./eco-challenge/images/githubicon.svg"
+                    alt="gitHub"
+                    class="footer__icon"
+                  />
+                  Simon</a
                 >
               </div>
             </div>

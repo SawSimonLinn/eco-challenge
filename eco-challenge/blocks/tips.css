@@ -70,3 +70,88 @@
   border-radius: 11px;
   border: none;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .tips {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tips__title {
+    font-size: 32px;
+  }
+
+  .tips__description {
+    font-size: 20px;
+    padding: 20px 20px 40px 0;
+    margin: 0;
+  }
+
+  .tips__daily-tip {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  .tips__daily-tip-heading {
+    font-size: 32px;
+    height: auto;
+    line-height: normal;
+  }
+
+  .tips__buttons {
+    width: 100%;
+  }
+
+  .tips__share-btn {
+    font-size: 18px;
+    padding: 16px 20px;
+    width: 50%;
+  }
+  .tips__copy-btn {
+    width: 50%;
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+
+  .tips__new-tip-btn {
+    position: static;
+    font-size: 18px;
+    padding: 20px 50px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .tips {
+    padding: 0 20px;
+  }
+  .tips__title {
+    margin: 100px 0 0 0;
+    font-size: 32px;
+  }
+
+  .tips__description {
+    font-size: 18px;
+    padding: 20px 20px 40px 0;
+    margin: 0;
+  }
+
+  .tips__daily-tip {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  .tips__daily-tip-heading {
+    font-size: 28px;
+    height: auto;
+    line-height: normal;
+  }
+
+  .tips__new-tip-btn {
+    position: static;
+    width: 100%;
+  }
+}
