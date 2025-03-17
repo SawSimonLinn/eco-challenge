@@ -18,23 +18,22 @@
   justify-content: space-between;
   align-items: start;
   box-shadow: 0 5px #fff;
-  height: 626px;
+  width: 393px;
 }
 .card__title {
   font-size: 22px;
+  text-align: left;
   font-weight: 600;
   padding: 23px 32px 0 32px;
   margin: 0;
 }
 .card__description {
   padding: 32px 32px 0 32px;
-  margin: 0 0 32px 0;
+  margin: 0;
   text-align: left;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   height: 260px;
-  overflow: hidden;
-  text-overflow: ellipsis [...];
 }
 .side-cards {
   display: grid;
@@ -47,15 +46,33 @@
   width: 258px;
   background: #4caf50;
   color: white;
-  padding: 10px;
+  padding: 150px 30px 30px 30px;
   border-radius: 8px;
-  text-align: center;
+  text-align: initial;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.side-card__title {
+  width: 170px;
+  line-height: 36px;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 600;
+  margin: 0 0 33px 0;
+}
+.side-card__btn {
+  font-weight: 300;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.side-card__btn:hover {
+  text-decoration: underline;
 }
 .card__img {
   max-width: 100%;
   border-radius: 25px 25px 0 0;
+  width: 393px;
+  height: 298px;
 
   top: 0;
 }
