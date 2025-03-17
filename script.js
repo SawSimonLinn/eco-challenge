@@ -209,3 +209,30 @@ window.addEventListener("load", function () {
     content.style.transform = "translateY(0)";
   }, 1500);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Navbar Scroll Animation
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY;
+    if (scrollTop > lastScrollTop) {
+      navbar.classList.add("nav-hide");
+    } else {
+      navbar.classList.remove("nav-hide");
+    }
+    lastScrollTop = scrollTop;
+  });
+
+  // Smooth Scrolling Effect (Already enabled via CSS scroll-behavior)
+  document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+});

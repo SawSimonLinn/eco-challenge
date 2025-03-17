@@ -33,7 +33,15 @@
   border: none;
   margin: 0 auto;
   margin-top: 76px;
+  box-shadow: 5px 5px #b3b3b3;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__challenge-btn:hover {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 5px 5px #fff;
 }
 
 .header__footer {

@@ -354,70 +354,67 @@
           </div>
         </footer>
       </main>
-
-      <!-- *** Modal for User Information ***  -->
-      <div id="userModal" class="modal">
-        <div class="modal-content">
-          <span class="modal__close-btn">&times;</span>
-          <h2 class="modal-content__title">Customize Your Eco Challenge!</h2>
-          <form class="modal-content__form" id="challengeForm">
-            <label class="modal-content__form-label" for="name">Name:</label>
-            <input
-              class="modal-content__form-input"
-              type="text"
-              id="name"
-              placeholder="Your Surname"
-              required
-            />
-
-            <label class="modal-content__form-label"
-              >Sustainability Goal:</label
-            >
-            <select class="modal-content__form-input" id="goal">
-              <option value="reduce-plastic">Reduce Plastic</option>
-              <option value="save-energy">Save Energy</option>
-              <option value="waste-less-water">Waste Less Water</option>
-              <option value="waste-less-water">Eco Friendly Travel</option>
-              <option value="waste-less-water">Sustainable Fashion</option>
-              <option value="waste-less-water">Green Home</option>
-              <option value="waste-less-water">Zero Waste Lifestyle</option>
-              <option value="waste-less-water">Sustainable Food</option>
-              <option value="waste-less-water">Random</option>
-            </select>
-
-            <label for="experience" class="modal-content__form-label"
-              >Experience Level:</label
-            >
-            <select class="modal-content__form-input" id="experience">
-              <option value="beginner">Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
-
-            <label class="modal-content__form-label"
-              >Preferred Challenge Type:</label
-            >
-            <div class="modal-content__form-label_checkbox">
-              <input
-                type="checkbox"
-                checked
-                name="challengeType"
-                value="daily"
-              />
-              Daily
-
-              <input type="checkbox" name="challengeType" value="weekly" />
-              Weekly
-            </div>
-
-            <button class="modal-content__form_btn" type="submit">
-              Continue
-            </button>
-          </form>
-        </div>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-      <script src="script.js"></script>
     </div>
+    <!-- *** Modal for User Information ***  -->
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <span class="modal__close-btn">&times;</span>
+        <h2 class="modal-content__title">Customize Your Eco Challenge!</h2>
+        <form class="modal-content__form" id="challengeForm">
+          <label class="modal-content__form-label" for="name">Name:</label>
+          <input
+            class="modal-content__form-input"
+            type="text"
+            id="name"
+            placeholder="Your Surname"
+            required
+          />
+
+          <label class="modal-content__form-label">Sustainability Goal:</label>
+          <select class="modal-content__form-input" id="goal">
+            <option value="reduce-plastic">Reduce Plastic</option>
+            <option value="save-energy">Save Energy</option>
+            <option value="waste-less-water">Waste Less Water</option>
+            <option value="waste-less-water">Eco Friendly Travel</option>
+            <option value="waste-less-water">Sustainable Fashion</option>
+            <option value="waste-less-water">Green Home</option>
+            <option value="waste-less-water">Zero Waste Lifestyle</option>
+            <option value="waste-less-water">Sustainable Food</option>
+            <option value="waste-less-water">Random</option>
+          </select>
+
+          <label for="experience" class="modal-content__form-label"
+            >Experience Level:</label
+          >
+          <select class="modal-content__form-input" id="experience">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+
+          <label class="modal-content__form-label"
+            >Preferred Challenge Type:</label
+          >
+          <div class="modal-content__form-label_checkbox">
+            <input type="checkbox" checked name="challengeType" value="daily" />
+            Daily
+
+            <input type="checkbox" name="challengeType" value="weekly" />
+            Weekly
+          </div>
+
+          <button
+            id="continueBtn"
+            class="modal-content__form_btn"
+            type="submit"
+          >
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

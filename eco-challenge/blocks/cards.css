@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  box-shadow: 0 5px #fff;
+  box-shadow: 5px 5px #000000;
   width: 393px;
 }
 .card__title {
@@ -42,7 +42,7 @@
   gap: 40px;
 }
 .side-card {
-  box-shadow: 0 5px #fff;
+  box-shadow: 5px 5px #000000;
   width: 258px;
   background: #4caf50;
   color: white;
@@ -51,6 +51,9 @@
   text-align: initial;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.side-card:hover {
+  transform: scale(1.02);
 }
 .side-card__title {
   width: 170px;
