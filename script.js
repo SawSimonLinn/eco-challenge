@@ -207,7 +207,7 @@ window.addEventListener("load", function () {
     const content = document.querySelector(".content");
     content.style.opacity = "1";
     content.style.transform = "translateY(0)";
-  }, 1500);
+  }, 1000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
