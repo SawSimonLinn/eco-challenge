@@ -30,7 +30,7 @@
 
 .tips__daily-tip-heading {
   font-weight: 400;
-  margin: 0 auto 45px 0;
+  margin: 0 auto 45px auto;
   font-size: 46px;
   height: 104px;
   text-align: center;
