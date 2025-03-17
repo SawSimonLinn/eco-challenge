@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     return goal.replace(/-/g, " ").split(" ").map(capitalize).join(" ");
   }
 
-  //
+  // * Load challenges based on goal and experience
   function loadChallenges(goal) {
     localStorage.setItem("currentGoal", goal);
     document.getElementById("userGoal").textContent = `Your Goal: ${formatGoal(
@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let completedCount =
           parseInt(localStorage.getItem("completedChallenges")) || 0;
 
+        // * Update progress steps
         function updateProgress() {
           completedCount = document.querySelectorAll(
             ".challenge__checkbox-input:checked"
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           const progressCounter = document.getElementById("progressCounter");
           progressCounter.textContent = `You've completed ${completedCount} out of 5 tasks today! Keep going!`;
 
-          //???? Update challenge list
+          // ? Update challenge list
           document
             .querySelectorAll(".challenge__checkbox-input")
             .forEach((checkbox) => {

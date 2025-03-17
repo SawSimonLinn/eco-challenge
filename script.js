@@ -25,9 +25,7 @@ const initialCards = [
 
 const navLinks = document.querySelectorAll(".nav__link");
 
-
-emailjs.init('xkn46C2gfGA_ZhitP');
-
+emailjs.init("xkn46C2gfGA_ZhitP");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -58,7 +56,7 @@ getRandomTip();
 
 const modal = document.getElementById("userModal");
 const startButtons = document.querySelectorAll("#startChallenge");
-const closeButton = document.querySelector(".close-btn");
+const closeButton = document.querySelector(".modal__close-btn");
 
 function showModal() {
   modal.style.display = "flex";
@@ -101,32 +99,32 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
   window.location.href = "challenge.html";
 });
 
-        let data = [];
+let data = [];
 
-        fetch("data.json")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Failed to load data");
-            }
-            return response.json();
-          })
-          .then((fetchedData) => {
-            if (fetchedData.length === 0) {
-              console.error("No data found in JSON");
-              return;
-            }
-            data = fetchedData;
-            updateLayout(0);
-          })
-          .catch((error) => console.error("Error fetching data:", error));
-        
-        function updateLayout(expandedIndex) {
-          if (!data.length) return;
-        
-          const expandedCard = document.getElementById("expanded-card");
-          const sideCardsContainer = document.getElementById("side-cards");
-        
-          expandedCard.innerHTML = `
+fetch("data.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to load data");
+    }
+    return response.json();
+  })
+  .then((fetchedData) => {
+    if (fetchedData.length === 0) {
+      console.error("No data found in JSON");
+      return;
+    }
+    data = fetchedData;
+    updateLayout(0);
+  })
+  .catch((error) => console.error("Error fetching data:", error));
+
+function updateLayout(expandedIndex) {
+  if (!data.length) return;
+
+  const expandedCard = document.getElementById("expanded-card");
+  const sideCardsContainer = document.getElementById("side-cards");
+
+  expandedCard.innerHTML = `
             <div class="hidden-content">
               <img class="card__img" src="${data[expandedIndex].image}" alt="${data[expandedIndex].title}">
             </div>
@@ -135,64 +133,68 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
               <p class="card__description">${data[expandedIndex].description}</p>
             </div>
           `;
-        
-          sideCardsContainer.innerHTML = data
-            .map((item, index) =>
-              index !== expandedIndex
-                ? `<div class="side-card" onclick="updateLayout(${index})">
+
+  sideCardsContainer.innerHTML = data
+    .map((item, index) =>
+      index !== expandedIndex
+        ? `<div class="side-card" onclick="updateLayout(${index})">
                     <h3>${item.title}</h3>
                   </div>`
-                : ""
-            )
-            .join("");
-        }
+        : ""
+    )
+    .join("");
+}
 
+document
+  .querySelector(".tips__copy-btn")
+  .addEventListener("click", function () {
+    const tipText = document.querySelector(
+      ".tips__daily-tip-heading"
+    ).innerText;
 
-        document.querySelector('.tips__copy-btn').addEventListener('click', function() {
-          const tipText = document.querySelector('.tips__daily-tip-heading').innerText;
-        
-          const textarea = document.createElement('textarea');
-          textarea.value = tipText;
-          document.body.appendChild(textarea);
-        
-          textarea.select();
-          textarea.setSelectionRange(0, 99999);
-        
-          document.execCommand('copy');
-        
-          document.body.removeChild(textarea);
-        
-          alert('Tip copied to clipboard!');
-        });
-        
-        function validateEmail(email) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailPattern.test(email);
-        }
-        
-        function subscribeUser() {
-          var email = document.getElementById("subscribe-email").value;
-          console.log("Email value:", email);
-        
-          if (validateEmail(email)) {
-            var templateParams = {
-              email: email,
-              from_name: "Eco Challenge",
-              to_name: "Subscriber",
-              message: "Thank you for subscribing to Eco Challenge!"
-            };
-        
-            emailjs.send('service_w5jlgrz', 'template_qnddmom', templateParams)
-              .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Thank you for subscribing!');
-                document.getElementById("subscribe-email").value = "";
-              })
-              .catch(function(error) {
-                console.log('FAILED...', error);
-                alert('Subscription failed. Please try again.');
-              });
-          } else {
-            alert('Please enter a valid email address.');
-          }
-        }
+    const textarea = document.createElement("textarea");
+    textarea.value = tipText;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
+
+    document.body.removeChild(textarea);
+
+    alert("Tip copied to clipboard!");
+  });
+
+function validateEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
+function subscribeUser() {
+  var email = document.getElementById("subscribe-email").value;
+  console.log("Email value:", email);
+
+  if (validateEmail(email)) {
+    var templateParams = {
+      email: email,
+      from_name: "Eco Challenge",
+      to_name: "Subscriber",
+      message: "Thank you for subscribing to Eco Challenge!",
+    };
+
+    emailjs
+      .send("service_w5jlgrz", "template_qnddmom", templateParams)
+      .then(function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Thank you for subscribing!");
+        document.getElementById("subscribe-email").value = "";
+      })
+      .catch(function (error) {
+        console.log("FAILED...", error);
+        alert("Subscription failed. Please try again.");
+      });
+  } else {
+    alert("Please enter a valid email address.");
+  }
+}

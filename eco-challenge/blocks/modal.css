@@ -71,7 +71,7 @@
 }
 
 /* Close Button */
-.close-btn {
+.modal__close-btn {
   position: absolute;
   top: -70px;
   right: -40px;
@@ -81,6 +81,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.close-btn:hover {
+.modal__close-btn:hover {
   color: #cacaca;
 }
