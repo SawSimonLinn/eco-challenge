@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="./eco-challenge/pages/index.css" />
   </head>
   <body>
-    <div class="page">
+    <!-- Preloader -->
+    <div id="preloader">
+      <img
+        src="./eco-challenge/images/eco-challenge.png"
+        alt="Logo"
+        class="preloader-logo"
+      />
+      <h1 class="preloader-title">ECO CHALLENGE</h1>
+      <div class="line-loader"></div>
+    </div>
+    <div class="page content">
       <!-- *** HEADER *** -->
       <header class="header">
         <nav class="nav">
@@ -57,286 +67,293 @@
         </p>
       </header>
 
-      <!-- *** CHALLENGES *** -->
-      <section id="challenges" class="challenges">
-        <p class="challenges__description">
-          Take small steps toward a greener future. Complete these simple tasks
-          to reduce your environmental footprint!
-        </p>
-        <h2 class="challenges__title">Complete Your Daily Eco Challenges!</h2>
-        <ul class="challenge__list">
-          <li class="challenge__checkbox">
-            <input
-              class="challenge__checkbox-input"
-              type="checkbox"
-              id="reduce-waste"
-              name="daily-challenges"
-            />
-            <div class="challenge__checkbox-text">
-              <label class="challenge__checkbox-text__title" for="reduce-waste"
-                >Reduce Waste</label
-              >
-              <p class="challenge__checkbox-text__desc">
-                Bring a reuseable bag when shopping.
-              </p>
-            </div>
-          </li>
-          <li class="challenge__checkbox">
-            <input
-              class="challenge__checkbox-input"
-              type="checkbox"
-              id="save-water"
-              name="daily-challenges"
-            />
-            <div class="challenge__checkbox-text">
-              <label class="challenge__checkbox-text__title" for="save-water"
-                >Save Water</label
-              >
-              <p class="challenge__checkbox-text__desc">
-                Take a 5-minute shower today.
-              </p>
-            </div>
-          </li>
-          <li class="challenge__checkbox">
-            <input
-              class="challenge__checkbox-input"
-              type="checkbox"
-              id="save-energy"
-              name="daily-challenges"
-            />
-            <div class="challenge__checkbox-text">
-              <label class="challenge__checkbox-text__title" for="save-energy"
-                >Save Energy</label
-              >
-              <p class="challenge__checkbox-text__desc">
-                Unplug devices when not in use.
-              </p>
-            </div>
-          </li>
-          <li class="challenge__checkbox">
-            <input
-              class="challenge__checkbox-input"
-              type="checkbox"
-              id="avoid-plastic"
-              name="daily-challenges"
-            />
-            <div class="challenge__checkbox-text">
-              <label class="challenge__checkbox-text__title" for="avoid-plastic"
-                >Avoid Plastic</label
-              >
-              <p class="challenge__checkbox-text__desc">
-                Say no to single-use plastic bags.
-              </p>
-            </div>
-          </li>
-          <li class="challenge__checkbox">
-            <input
-              class="challenge__checkbox-input"
-              type="checkbox"
-              id="choose-sustainable-transport"
-              name="daily-challenges"
-            />
-            <div class="challenge__checkbox-text">
-              <label
-                class="challenge__checkbox-text__title"
-                for="choose-sustainable-transport"
-                >Choose Sustainable Transport</label
-              >
-              <p class="challenge__checkbox-text__desc">
-                Walk, bike, or use public transport instead of driving.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <!-- *** TIPS *** -->
-      <section id="tips" class="tips">
-        <h2 class="tips__title">Today's Sustainability Tip</h2>
-        <p class="tips__description">
-          A small step for you, a giant leap for the planet. Get inspired and
-          share the message!
-        </p>
-        <article class="tips__daily-tip">
-          <h3 class="tips__daily-tip-heading">
-            “Turn off the tap while brushing your teeth to save up to 8 gallons
-            of water per day!”
-          </h3>
-          <div class="tips__buttons">
-            <button type="button" class="tips__share-btn">
-              Share on Twitter
-            </button>
-            <button type="button" class="tips__copy-btn">
-              Copy to Clipboard
-            </button>
-          </div>
-        </article>
-        <button type="button" class="tips__new-tip-btn">New Tip</button>
-      </section>
-
-      <!-- *** RESOURCES *** -->
-      <section id="learnmore" class="resources">
-        <h2 class="resources__title">Learn More & Make a Bigger Impact</h2>
-        <p class="resources__description">
-          Small changes lead to big results! Here are some tips and resources to
-          help you live a more sustainable lifestyle.
-        </p>
-        <div class="container">
-          <div class="expanded-card" id="expanded-card">
-            <div class="hidden-content">
-              <img src="" alt="" />
-            </div>
-            <h3>Loading...</h3>
-            <div class="hidden-content">
-              <p></p>
-            </div>
-          </div>
-          <div class="side-cards" id="side-cards"></div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer__nav-bar">
-            <div class="footer__logo">
-              <img
-                src="../eco-challenge/images/eco-challenge-logo.svg"
-                alt="footer logo"
-                class="footer__logo-icon"
+      <main class="main">
+        <!-- *** CHALLENGES *** -->
+        <section id="challenges" class="challenges">
+          <p class="challenges__description">
+            Take small steps toward a greener future. Complete these simple
+            tasks to reduce your environmental footprint!
+          </p>
+          <h2 class="challenges__title">Complete Your Daily Eco Challenges!</h2>
+          <ul class="challenge__list">
+            <li class="challenge__checkbox">
+              <input
+                class="challenge__checkbox-input"
+                type="checkbox"
+                id="reduce-waste"
+                name="daily-challenges"
               />
-              Eco Challenge
-            </div>
-            <nav class="footer__links">
-              <a href="#challenges">Challenges</a>
-              <a href="#tips">Tips</a>
-              <a href="#learnmore">Learn More</a>
-              <a
-                href="#userModal"
-                class="footer__start-challenge-btn"
-                id="startChallenge"
-                >Start Challenge</a
-              >
-            </nav>
-            <div class="social-icons">
-              <a href="https://linkedin.com">
-                <img
-                  src="./eco-challenge/images/linkdInicon.svg"
-                  alt="LinkedIn"
-                />
-              </a>
-              <a href="https://facebook.com">
-                <img
-                  src="./eco-challenge/images/facebookicon.svg"
-                  alt="Facebook"
-                  alt="Facebook"
-                />
-              </a>
-              <a href="https://twitter.com">
-                <img
-                  src="./eco-challenge/images/twittericon.svg"
-                  alt="Twitter"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="footer__contact">
-            <address class="footer__information-contact">
-              <p>Contact us:</p>
-              <p class="footer__contact-email">
-                Email:
-                <a href="mailto:info@ecochallenge.com"
-                  >info@ecochallengeapp.com</a
+              <div class="challenge__checkbox-text">
+                <label
+                  class="challenge__checkbox-text__title"
+                  for="reduce-waste"
+                  >Reduce Waste</label
                 >
-              </p>
-              <p class="footer__contact-phone">
-                Phone: <a href="tel:+13333334444">333-333-4444</a>
-              </p>
-              <p class="footer__contact-address">
-                Address: 123 Main Blvd, Building 1, Los Angeles, California,
-                12345
-              </p>
-            </address>
+                <p class="challenge__checkbox-text__desc">
+                  Bring a reuseable bag when shopping.
+                </p>
+              </div>
+            </li>
+            <li class="challenge__checkbox">
+              <input
+                class="challenge__checkbox-input"
+                type="checkbox"
+                id="save-water"
+                name="daily-challenges"
+              />
+              <div class="challenge__checkbox-text">
+                <label class="challenge__checkbox-text__title" for="save-water"
+                  >Save Water</label
+                >
+                <p class="challenge__checkbox-text__desc">
+                  Take a 5-minute shower today.
+                </p>
+              </div>
+            </li>
+            <li class="challenge__checkbox">
+              <input
+                class="challenge__checkbox-input"
+                type="checkbox"
+                id="save-energy"
+                name="daily-challenges"
+              />
+              <div class="challenge__checkbox-text">
+                <label class="challenge__checkbox-text__title" for="save-energy"
+                  >Save Energy</label
+                >
+                <p class="challenge__checkbox-text__desc">
+                  Unplug devices when not in use.
+                </p>
+              </div>
+            </li>
+            <li class="challenge__checkbox">
+              <input
+                class="challenge__checkbox-input"
+                type="checkbox"
+                id="avoid-plastic"
+                name="daily-challenges"
+              />
+              <div class="challenge__checkbox-text">
+                <label
+                  class="challenge__checkbox-text__title"
+                  for="avoid-plastic"
+                  >Avoid Plastic</label
+                >
+                <p class="challenge__checkbox-text__desc">
+                  Say no to single-use plastic bags.
+                </p>
+              </div>
+            </li>
+            <li class="challenge__checkbox">
+              <input
+                class="challenge__checkbox-input"
+                type="checkbox"
+                id="choose-sustainable-transport"
+                name="daily-challenges"
+              />
+              <div class="challenge__checkbox-text">
+                <label
+                  class="challenge__checkbox-text__title"
+                  for="choose-sustainable-transport"
+                  >Choose Sustainable Transport</label
+                >
+                <p class="challenge__checkbox-text__desc">
+                  Walk, bike, or use public transport instead of driving.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-            <div class="footer__subs-container">
-              <div class="footer__subs-box">
-                <input
-                  class="footer__email-input"
-                  type="email"
-                  id="subscribe-email"
-                  name="email"
-                  placeholder="Email"
-                  autocomplete="email"
-                />
-                <button class="footer__subs-btn" onclick="subscribeUser()">
-                  Subscribe
-                </button>
-              </div>
+        <!-- *** TIPS *** -->
+        <section id="tips" class="tips">
+          <h2 class="tips__title">Today's Sustainability Tip</h2>
+          <p class="tips__description">
+            A small step for you, a giant leap for the planet. Get inspired and
+            share the message!
+          </p>
+          <article class="tips__daily-tip">
+            <h3 class="tips__daily-tip-heading">
+              “Turn off the tap while brushing your teeth to save up to 8
+              gallons of water per day!”
+            </h3>
+            <div class="tips__buttons">
+              <button type="button" class="tips__share-btn">
+                Share on Twitter
+              </button>
+              <button type="button" class="tips__copy-btn">
+                Copy to Clipboard
+              </button>
             </div>
-          </div>
+          </article>
+          <button type="button" class="tips__new-tip-btn">New Tip</button>
+        </section>
 
-          <div class="footer__github-links">
-            <p class="footer__copyright">© 2025 We Git Bugs</p>
-            <div class="footer__contributors">
-              <div class="footer__contributor">
-                <a
-                  href="https://github.com/ketessos"
-                  target="_blank"
-                  class="footer__link"
-                >
-                  <img
-                    src="./eco-challenge/images/githubicon.svg"
-                    alt="gitHub"
-                    class="footer__icon"
-                  />
-                  Ketelin</a
-                >
+        <!-- *** RESOURCES *** -->
+        <section id="learnmore" class="resources">
+          <h2 class="resources__title">Learn More & Make a Bigger Impact</h2>
+          <p class="resources__description">
+            Small changes lead to big results! Here are some tips and resources
+            to help you live a more sustainable lifestyle.
+          </p>
+          <div class="container">
+            <div class="expanded-card" id="expanded-card">
+              <div class="hidden-content">
+                <img src="" alt="" />
               </div>
-              <div class="footer__contributor">
-                <a
-                  href="https://github.com/JadenB22"
-                  target="_blank"
-                  class="footer__link"
-                >
-                  <img
-                    src="./eco-challenge/images/githubicon.svg"
-                    alt="gitHub"
-                    class="footer__icon"
-                  />
-                  Jaden</a
-                >
+              <h3>Loading...</h3>
+              <div class="hidden-content">
+                <p></p>
               </div>
-              <div class="footer__contributor">
-                <a
-                  href="https://github.com/averylg13"
-                  target="_blank"
-                  class="footer__link"
-                >
-                  <img
-                    src="./eco-challenge/images/githubicon.svg"
-                    alt="gitHub"
-                    class="footer__icon"
-                  />
-                  Avery</a
-                >
+            </div>
+            <div class="side-cards" id="side-cards"></div>
+          </div>
+        </section>
+
+        <!-- *** FOOTER *** -->
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer__nav-bar">
+              <div class="footer__logo">
+                <img
+                  src="../eco-challenge/images/eco-challenge-logo.svg"
+                  alt="footer logo"
+                  class="footer__logo-icon"
+                />
+                Eco Challenge
               </div>
-              <div class="footer__contributor">
+              <nav class="footer__links">
+                <a href="#challenges">Challenges</a>
+                <a href="#tips">Tips</a>
+                <a href="#learnmore">Learn More</a>
                 <a
-                  href="https://github.com/SawSimonLinn"
-                  target="_blank"
-                  class="footer__link"
+                  href="#userModal"
+                  class="footer__start-challenge-btn"
+                  id="startChallenge"
+                  >Start Challenge</a
                 >
+              </nav>
+              <div class="social-icons">
+                <a href="https://linkedin.com">
                   <img
-                    src="./eco-challenge/images/githubicon.svg"
-                    alt="gitHub"
-                    class="footer__icon"
+                    src="./eco-challenge/images/linkdInicon.svg"
+                    alt="LinkedIn"
                   />
-                  Simon</a
-                >
+                </a>
+                <a href="https://facebook.com">
+                  <img
+                    src="./eco-challenge/images/facebookicon.svg"
+                    alt="Facebook"
+                    alt="Facebook"
+                  />
+                </a>
+                <a href="https://twitter.com">
+                  <img
+                    src="./eco-challenge/images/twittericon.svg"
+                    alt="Twitter"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="footer__contact">
+              <address class="footer__information-contact">
+                <p>Contact us:</p>
+                <p class="footer__contact-email">
+                  Email:
+                  <a href="mailto:info@ecochallenge.com"
+                    >info@ecochallengeapp.com</a
+                  >
+                </p>
+                <p class="footer__contact-phone">
+                  Phone: <a href="tel:+13333334444">333-333-4444</a>
+                </p>
+                <p class="footer__contact-address">
+                  Address: 123 Main Blvd, Building 1, Los Angeles, California,
+                  12345
+                </p>
+              </address>
+
+              <div class="footer__subs-container">
+                <div class="footer__subs-box">
+                  <input
+                    class="footer__email-input"
+                    type="email"
+                    id="subscribe-email"
+                    name="email"
+                    placeholder="Email"
+                    autocomplete="email"
+                  />
+                  <button class="footer__subs-btn" onclick="subscribeUser()">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__github-links">
+              <p class="footer__copyright">© 2025 We Git Bugs</p>
+              <div class="footer__contributors">
+                <div class="footer__contributor">
+                  <a
+                    href="https://github.com/ketessos"
+                    target="_blank"
+                    class="footer__link"
+                  >
+                    <img
+                      src="./eco-challenge/images/githubicon.svg"
+                      alt="gitHub"
+                      class="footer__icon"
+                    />
+                    Ketelin</a
+                  >
+                </div>
+                <div class="footer__contributor">
+                  <a
+                    href="https://github.com/JadenB22"
+                    target="_blank"
+                    class="footer__link"
+                  >
+                    <img
+                      src="./eco-challenge/images/githubicon.svg"
+                      alt="gitHub"
+                      class="footer__icon"
+                    />
+                    Jaden</a
+                  >
+                </div>
+                <div class="footer__contributor">
+                  <a
+                    href="https://github.com/averylg13"
+                    target="_blank"
+                    class="footer__link"
+                  >
+                    <img
+                      src="./eco-challenge/images/githubicon.svg"
+                      alt="gitHub"
+                      class="footer__icon"
+                    />
+                    Avery</a
+                  >
+                </div>
+                <div class="footer__contributor">
+                  <a
+                    href="https://github.com/SawSimonLinn"
+                    target="_blank"
+                    class="footer__link"
+                  >
+                    <img
+                      src="./eco-challenge/images/githubicon.svg"
+                      alt="gitHub"
+                      class="footer__icon"
+                    />
+                    Simon</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </main>
 
       <!-- *** Modal for User Information ***  -->
       <div id="userModal" class="modal">

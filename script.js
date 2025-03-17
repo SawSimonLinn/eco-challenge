@@ -198,3 +198,14 @@ function subscribeUser() {
     alert("Please enter a valid email address.");
   }
 }
+
+// ? Handle form submission
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+
+    const content = document.querySelector(".content");
+    content.style.opacity = "1";
+    content.style.transform = "translateY(0)";
+  }, 1500);
+});
