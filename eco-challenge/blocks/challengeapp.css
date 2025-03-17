@@ -3,7 +3,7 @@
     fixed;
   font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
 
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
