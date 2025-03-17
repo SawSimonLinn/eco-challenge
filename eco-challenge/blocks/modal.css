@@ -78,8 +78,9 @@
   font-size: 60px;
   cursor: pointer;
   color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-btn:hover {
-  color: red;
+  color: #cacaca;
 }
