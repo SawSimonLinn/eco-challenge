@@ -148,36 +148,51 @@ document.getElementById("challengeForm").addEventListener("submit", (e) => {
         }
 
 
-
-
+        document.querySelector('.tips__copy-btn').addEventListener('click', function() {
+          const tipText = document.querySelector('.tips__daily-tip-heading').innerText;
+        
+          const textarea = document.createElement('textarea');
+          textarea.value = tipText;
+          document.body.appendChild(textarea);
+        
+          textarea.select();
+          textarea.setSelectionRange(0, 99999);
+        
+          document.execCommand('copy');
+        
+          document.body.removeChild(textarea);
+        
+          alert('Tip copied to clipboard!');
+        });
+        
         function validateEmail(email) {
           const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           return emailPattern.test(email);
-      }
-    
-      function subscribeUser() {
-        var email = document.getElementById("subscribe-email").value;
-        console.log("Email value:", email);
-        
-        if (validateEmail(email)) {
-            var templateParams = {
-                email: email,
-                from_name: "Eco Challenge",
-                to_name: "Subscriber",
-                message: "Thank you for subscribing to Eco Challenge!"
-            };
-    
-            emailjs.send('service_w5jlgrz', 'template_qnddmom', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Thank you for subscribing!');
-                    document.getElementById("subscribe-email").value = ""; // Move reset here
-                })
-                .catch(function(error) {
-                    console.log('FAILED...', error);
-                    alert('Subscription failed. Please try again.');
-                });
-        } else {
-            alert('Please enter a valid email address.');
         }
-    }
+        
+        function subscribeUser() {
+          var email = document.getElementById("subscribe-email").value;
+          console.log("Email value:", email);
+        
+          if (validateEmail(email)) {
+            var templateParams = {
+              email: email,
+              from_name: "Eco Challenge",
+              to_name: "Subscriber",
+              message: "Thank you for subscribing to Eco Challenge!"
+            };
+        
+            emailjs.send('service_w5jlgrz', 'template_qnddmom', templateParams)
+              .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Thank you for subscribing!');
+                document.getElementById("subscribe-email").value = "";
+              })
+              .catch(function(error) {
+                console.log('FAILED...', error);
+                alert('Subscription failed. Please try again.');
+              });
+          } else {
+            alert('Please enter a valid email address.');
+          }
+        }
